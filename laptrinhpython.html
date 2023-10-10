@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lập trình ngôn ngữ Python</title>
+    <link rel="stylesheet" href="screen.css" />
+    <link rel="stylesheet" href="hinhanh.css" />
+    <link rel="stylesheet" href="trinhchieu.css" />
+    <link rel="stylesheet" href="hinhanh1.css" />
+    <base href="index.html" />
+    <style>
+        #snowflakeContainer{position:absolute;left:0px;top:0px;}
+        .snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+        .snowflake:hover {cursor:default}
+    </style>
+    <div id='snowflakeContainer'>
+    <p class='snowflake'>❄</p>
+    </div>
+    <script style='text/javascript'>
+        //<![CDATA[
+        var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+        //]]>
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="search">
+        <form>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input
+            type="text"
+            class="search-border"
+            placeholder="Tìm kiếm ..."
+            value=""
+            name="s"
+          /><a href="/en/" />
+          <button class="button">
+            <i class="fa fa-search" style="color: white"
+              ><img
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/6bc7ec86-df44-48f9-83b6-13637163b322.image.png?v=1695364727805"
+                alt=""
+                width="10"
+                height="50"
+                srcset="" /><a></a
+            ></i>
+          </button>
+          <a href="/en/"
+            ><img
+              src="https://imgur.com/HQZJODF.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+          <a href="/"
+            ><img
+              src="https://imgur.com/ddgBAVL.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+        </form>
+      </div>
+    </header>
+    <div class="container">
+      <header>
+        <h2>Nguyen Huynh Nhat Bao's Hello World Page.</h2>
+        <a href="index.html" class="logo"
+          ><img
+            src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/cd8fd9c8-ab50-484a-9b5d-5669dc588f3e.image.png?v=1695866222769"
+            alt=""
+            width="200"
+            height="1000000"
+            srcset=""
+        /></a>
+      </header>
+      <nav class="site-nav">
+        <ul class="group">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="job.html">Công Việc</a></li>
+          <li><a href="news.html">Tin tức công nghệ</a></li>
+          <li><a href="ContactUs.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+        <div class="content-area group">
+          <div class="main-area">
+            <h1>Tìm hiểu về Python</h1>
+            <h3>
+                Python là ngôn ngữ gì?
+            </h3>
+            <p>Python là một ngôn ngữ lập trình được sử dụng rộng rãi trong các ứng dụng web, phát triển phần mềm, khoa học dữ liệu và máy học (ML). Các nhà phát triển sử dụng Python vì nó hiệu quả, dễ học và có thể chạy trên nhiều nền tảng khác nhau. Phần mềm Python được tải xuống miễn phí, tích hợp tốt với tất cả các loại hệ thống và tăng tốc độ phát triển.</p>
+            <h3>Python mang lại những lợi ích gì?</h3>
+            <p>Lập trình viên Python bao gồm :</p>
+            <ul>
+                <li>Các nhà phát triển có thể dễ dàng đọc và hiểu một chương trình Python vì ngôn ngữ này có cú pháp cơ bản giống tiếng Anh. </li>
+                <li>Python giúp cải thiện năng suất làm việc của các nhà phát triển vì so với những ngôn ngữ khác, họ có thể sử dụng ít dòng mã hơn để viết một chương trình Python.</li>
+                <li>Python có một thư viện tiêu chuẩn lớn, chứa nhiều dòng mã có thể tái sử dụng cho hầu hết mọi tác vụ. Nhờ đó, các nhà phát triển sẽ không cần phải viết mã từ đầu.</li>
+                <li>Các nhà phát triển có thể dễ dàng sử dụng Python với các ngôn ngữ lập trình phổ biến khác như Java, C và C++.</li>
+                <li>Cộng đồng Python tích cực hoạt động bao gồm hàng triệu nhà phát triển nhiệt tình hỗ trợ trên toàn thế giới. Nếu gặp phải vấn đề, bạn sẽ có thể nhận được sự hỗ trợ nhanh chóng từ cộng đồng.</li>
+                <li>Trên Internet có rất nhiều tài nguyên hữu ích nếu bạn muốn học Python. Ví dụ: bạn có thể dễ dàng tìm thấy video, chỉ dẫn, tài liệu và hướng dẫn dành cho nhà phát triển.</li>
+                <li>Python có thể được sử dụng trên nhiều hệ điều hành máy tính khác nhau, chẳng hạn như Windows, macOS, Linux và Unix.</li>
+            </ul>
+            <h3>
+                Python được sử dụng như thế nào?
+            </h3>
+            <p>Ngôn ngữ Python được sử dụng nhiều trong lĩnh vực phát triển ứng dụng, bao gồm những ví dụ sau:</p>
+            <h4>1. Phát triển web phía máy chủ</h4>
+            <p>Phát triển web phía máy chủ bao gồm những hàm backend phức tạp mà các trang web thực hiện để hiển thị thông tin cho người dùng. Ví dụ: các trang web phải tương tác với cơ sở dữ liệu, giao tiếp với các trang web khác và bảo vệ dữ liệu khi truyền qua mạng. 
+<br><br>
+                Python hữu ích trong việc lập trình mã phía máy chủ bởi vì ngôn ngữ này cung cấp nhiều thư viện bao gồm mã viết sẵn cho các hàm backend phức tạp. Các nhà phát triển cũng sử dụng một loạt các khung Python cung cấp tất cả những công cụ cần thiết để xây dựng ứng dụng web một cách nhanh chóng và dễ dàng hơn. Ví dụ: các nhà phát triển có thể tạo ứng dụng web khung trong nháy mắt bởi vì họ không cần phải lập trình nó từ đầu. Sau đó, họ có thể kiểm tra ứng dụng web này bằng cách sử dụng các công cụ kiểm thử của khung, mà không cần phụ thuộc vào những công cụ kiểm thử bên ngoài.</p>
+            <h4>
+                2. Tự động hóa bằng các tập lệnh Python
+            </h4>
+            <p>Ngôn ngữ tập lệnh là một ngôn ngữ lập trình tự động hóa các tác vụ mà thường được con người thực hiện. Các lập trình viên thường xuyên sử dụng các tập lệnh Python để tự động hóa nhiều tác vụ hàng ngày như:</p>
+            <u>
+                <li>Đổi tên một số lượng lớn tệp cùng lúc</li>
+                <li>Chuyển đổi một tệp sang một loại tệp khác</li>
+                <li>Loại bỏ các từ trùng lặp trong tệp văn bản</li>
+                <li>Thực hiện các phép tính toán cơ bản</li>
+                <li>Gửi email</li>
+                <li>Tải xuống nội dung
+                </li>
+                <li>Thực hiện phân tích nhật ký cơ bản</li>
+                <li>Tìm kiếm lỗi trong nhiều tệp</li>
+            </u>
+            <h4>3. Khoa học dữ liệu và máy học</h4>
+            <p> 
+                Khoa học dữ liệu trích xuất thông tin quý giá từ dữ liệu và máy học (ML) dạy máy tính tự động học hỏi từ dữ liệu và đưa ra các dự đoán chính xác. Các nhà khoa học dữ liệu sử dụng Python cho các tác vụ khoa học dữ liệu sau:
+            </p>
+           <ul>
+            <li>Sửa và loại bỏ dữ liệu không chính xác, hay còn được gọi là làm sạch dữ liệu </li>
+            <li>Trích xuất và chọn lọc các đặc điểm đa dạng của dữ liệu</li>
+            <li>Ghi nhãn dữ liệu gán tên có ý nghĩa cho dữ liệu</li>
+            <li>Tìm các số liệu thống kê khác nhau từ dữ liệu</li>
+            <li>Trực quan hóa dữ liệu bằng cách sử dụng các biểu đồ và đồ thị, chẳng hạn như biểu đồ đường, biểu đồ cột, biểu đồ tần suất và biểu đồ tròn</li>
+           </ul>
+           <br>
+           <p>Các nhà khoa học dữ liệu sử dụng những thư viện ML của Python để đào tạo các mô hình ML và xây dựng các công cụ phân loại giúp phân loại dữ liệu một cách chính xác. Các chuyên gia từ nhiều lĩnh vực sử dụng những công cụ phân loại dựa trên Python để thực hiện các tác vụ phân loại, chẳng hạn như phân loại hình ảnh, văn bản cũng như lưu lượng truy cập mạng, nhận dạng giọng nói và nhận diện khuôn mặt. Các nhà khoa học dữ liệu cũng sử dụng Python cho deep learning, một kỹ thuật ML nâng cao.</p>
+           <h4>4. Phát triển phần mềm</h4>
+          <p> Các nhà phát triển phần mềm thường sử dụng Python cho những tác vụ phát triển và ứng dụng phần mềm khác nhau, chẳng hạn như:</p>
+          <ul>
+            <li>Theo dõi lỗi trong mã của phần mềm</li>
+            <li>Tự động xây dựng phần mềm</li>
+            <li>Đảm nhận quản lý dự án phần mềm</li>
+            <li>Phát triển nguyên mẫu phần mềm</li>
+            <li>Phát triển các ứng dụng máy tính bằng cách sử dụng những thư viện Giao diện đồ họa người dùng (GUI)</li>
+            <li>Phát triển từ các trò chơi văn bản đơn giản cho đến những trò chơi điện tử phức tạp</li>
+          </ul>
+          <h4>5. Tự động hóa kiểm thử phần mềm</h4>
+          <p>Kiểm thử phần mềm là quy trình kiểm tra xem kết quả thực tế từ phần mềm có khớp với kết quả mong đợi không để đảm bảo rằng phần mềm không có lỗi. </p>
+          <ul>
+            <li>Các nhà phát triển sử dụng khung kiểm thử đơn vị Python, chẳng hạn như Unittest, Robot và PyUnit, để kiểm thử các hàm do họ viết. </li>
+            <li>Các kỹ sư kiểm thử phần mềm sử dụng Python để viết các trường hợp kiểm thử cho nhiều tình huống khác nhau. Ví dụ: họ sử dụng ngôn ngữ này để kiểm thử giao diện người dùng của một ứng dụng web, nhiều thành phần của phần mềm và những tính năng mới. </li>
+         </ul>
+         <p>Các nhà phát triển có thể sử dụng một số công cụ để tự động chạy tập lệnh kiểm thử. Những công cụ này có tên gọi là công cụ Tích hợp liên tục/Triển khai liên tục (CI/CD). Các kỹ sư kiểm thử phần mềm cũng như những nhà phát triển sử dụng các công cụ CI/CD như Travis CI và Jenkins để tự động hóa quy trình kiểm thử. Công cụ CI/CD tự động chạy các tập lệnh kiểm thử Python và báo cáo kết quả kiểm thử bất kỳ khi nào nhà phát triển thêm vào những dòng mã mới.</p>
+         <h3>Python có lịch sử như thế nào?</h3>
+         <p>Guido Van Rossum, một lập trình viên máy tính ở Hà Lan, đã tạo ra Python. Ông bắt đầu phát triển ngôn ngữ này vào năm 1989 tại Centrum Wiskunde & Informatica (CWI), ban đầu chỉ là một dự án tiêu khiển để giúp ông giết thời gian trong dịp Giáng sinh. Tên gọi của ngôn ngữ này được lấy cảm hứng từ chương trình truyền hình Monty Python's Flying Circus của đài BBC vì Guido Van Rossum là một “fan cứng” của chương trình này. </p>
+         <h5>Lịch sử các phiên bản Python</h5>
+         <ul>
+            <li>Guido Van Rossum cho ra mắt phiên bản đầu tiên của ngôn ngữ Python (phiên bản 0.9.0) vào năm 1991. Ngôn ngữ này đã bao gồm các tính năng hữu ích như một số kiểu dữ liệu và hàm để xử lý lỗi. </li>
+            <li>Python 1.0 đã được ra mắt vào năm 1994 với các hàm mới để dễ dàng xử lý danh sách dữ liệu, chẳng hạn như ánh xạ, lọc và lược bỏ.</li>
+            <li>Python 2.0 đã được ra mắt vào ngày 16 tháng 10 năm 2000, với các tính năng hữu ích mới cho lập trình viên, chẳng hạn như hỗ trợ ký tự Unicode và cách xử lý chi tiết một danh sách nhanh chóng hơn.</li>
+            <li>Python 3.0 đã được ra mắt vào ngày 3 tháng 12 năm 2008. Phiên bản này bao gồm các tính năng như hàm in và hỗ trợ nhiều hơn cho việc phân chia số và xử lý lỗi. </li>
+         </ul>
+<h3>Python có những đặc điểm gì?</h3>
+<p>Các đặc điểm sau tạo nên sự độc đáo của ngôn ngữ lập trình Python:</p>
+<h4>1. Python là một ngôn ngữ thông dịch</h4>
+<p>Python là một ngôn ngữ thông dịch, điều này nghĩa là ngôn ngữ này trực tiếp chạy từng dòng mã. Nếu có lỗi trong mã chương trình, nó sẽ ngừng chạy. Do đó, lập trình viên có thể nhanh chóng tìm ra lỗi trong đoạn mã.</p>
+<h4>2. Python là một ngôn ngữ dễ sử dụng</h4>
+<p>Python sử dụng từ ngữ giống trong tiếng Anh. Không giống như các ngôn ngữ lập trình khác, Python không sử dụng dấu ngoặc ôm. Thay vào đó, ngôn ngữ này sử dụng thụt đầu dòng. </p>
+<h4>3. Python là một ngôn ngữ linh hoạt</h4>
+<p>Các lập trình viên không cần phải khai báo loại biến khi viết mã bởi vì Python sẽ xác định chúng vào thời điểm chạy. Vì vậy, bạn có thể viết các chương trình Python một cách nhanh chóng hơn.</p>
+<h4>4. Python là một ngôn ngữ cấp cao</h4>
+<p>Python gần gũi với ngôn ngữ con người hơn các ngôn ngữ lập trình khác. Do đó, các lập trình viên không cần phải lo lắng về những chức năng cơ bản của nó như kiến trúc và quản lý bộ nhớ.</p>
+<h4>5. Python là một ngôn ngữ lập trình hướng đối tượng</h4>
+<p>Python coi mọi thứ đều là đối tượng, nhưng ngôn ngữ này cũng hỗ trợ các phương thức lập trình khác như lập trình hàm và lập trình cấu trúc.</p>
+<h3>Thư viện Python là gì ?</h3>
+<p>Thư viện là một tập hợp các mã thường xuyên được sử dụng mà các nhà phát triển có thể bao gồm trong những chương trình Python của họ để không phải lập trình từ đầu. Theo mặc định, Python đi kèm với Thư viện chuẩn, chứa rất nhiều các hàm có thể tái sử dụng. Ngoài ra, hơn 137.000 thư viện Python có sẵn cho các ứng dụng khác nhau, bao gồm phát triển web, khoa học dữ liệu và máy học (ML).</p>
+<h4>Thư viện Python phổ biến nhất</h4>
+<ul>
+    <li>Thư viện Matplotlib</li>
+    <li>Thư viện Pandas</li>
+    <li>Thư viện NumPy</li>
+    <li>Thư viện Requests</li>
+    <li>Thư viện OpenCV-Python</li>
+    <li>Thư viện Keras</li>
+</ul>
+<h4>Khung Python là gì?</h4>
+<p>Khung Python là tập hợp của các gói và mô-đun. Mô-đun là tập hợp của các mã liên quan và gói là tập hợp của các mô-đun. Các nhà phát triển có thể sử dụng khung Python để xây dựng các ứng dụng Python nhanh hơn vì họ không phải lo lắng về các chi tiết cấp thấp như cách giao tiếp trong ứng dụng web hoặc cách Python sẽ làm cho chương trình chạy nhanh hơn. Python có hai loại khung: </p>
+<ul>
+    <li>Khung full-stack bao gồm hầu hết mọi thứ cần thiết để xây dựng một ứng dụng lớn.</li>
+    <li>Khung micro là một khung cơ bản cung cấp các chức năng tối thiểu để xây dựng những ứng dụng Python đơn giản. Nó cũng cung cấp các tiện ích mở rộng nếu ứng dụng cần các hàm phức tạp hơn.</li>
+</ul>
+
+        </div>
+
+        <aside class="sidebar">
+          <div class="lich">
+            <div id="days"></div>
+            <div id="dates"></div>
+            <div id="times"></div>
+      </div>
+      
+      <style>
+      .lich{
+      padding:20px;
+      background:#f1f1f1;
+      border-radius:10px;
+      font-size:30px;
+      border:2px solid #999;
+      }
+      </style>
+      
+      <script>
+      window.onload = setInterval(clock,1000);
+      function clock()
+      {
+      var d = new Date();
+      var date = d.getDate();
+      var month = d.getMonth();
+      var montharr =["Tháng 1","Tháng 2","tháng 3","Tháng 4","Tháng 5","Tháng 6","Tháng 7","Tháng 8","Tháng 9","Tháng 10","tháng 11","Tháng 12"];
+      month=montharr[month];
+      var year = d.getFullYear();
+      var day = d.getDay();
+      var dayarr =["Chủ Nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"];
+      day=dayarr[day];
+      var hour =d.getHours();
+      var min = d.getMinutes();
+      var sec = d.getSeconds();
+      document.getElementById("days").innerHTML=day;
+      document.getElementById("dates").innerHTML=date+" "+month+" "+year;
+      document.getElementById("times").innerHTML=hour+":"+min+":"+sec;
+      }
+      </script>
+          <h3>
+            Bài Viết Liên Quan
+          </h3>
+          <div>
+            <h4>
+              <a href="thietkegiaodienwebsite.html">Thiết kế giao diện website</a></h4>
+            </div>
+          <div>
+              <img
+                align="left"
+                height="300"
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/40e030a4-cdc0-4d7f-980f-9f447a6f6382.image.png?v=1695750582571"
+                style="margin-left: auto; margin-right: auto"
+                width="350"
+              />&emsp;Một website được cho là chất lượng cần phải có phần giao diện web đẹp mắt và thu hút, đặc biệt thúc đẩy được hành vi tương tác của người dùng trong quá trình truy cập. Bởi trang web chính là phương thức để đưa thương hiệu
+              gần hơn với khách hàng.
+            <hr />
+          </div>
+          <div>
+            <h4>
+              <a href="laptrinhjava.html">Lập trình ngôn ngữ Java</a></h4>
+            <img
+                align="left"
+                height="300"
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/faf030d7-e9a1-4d4a-a807-3dc37f95fdaa.image.png?v=1695699559053"
+                style="margin-left: auto; margin-right: auto"
+                width="350"
+              />&emsp;Vì sao Java lại trở thành một lựa chọn phổ biến của các
+              nhà phát triển phần mềm hiện đại?<br />&emsp;Ngôn ngữ lập trình
+              Java có công dụng gì?<br />&emsp;Java hoạt động như thế nào...?
+          </div>
+          <hr>
+          <h4>
+              <a href="laptrinhc.html">Lập trình ngôn ngữ C</a></h4>
+          <div>
+          <img
+                align="left"
+                height="300"
+                src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/92a1e23c-ed3c-4160-8824-ddb972e70583.image.png?v=1695877504431"
+                style="margin-left: auto; margin-right: auto"
+                width="350"
+              />&emsp;Ngôn ngữ C là ngôn ngữ lập trình có mục đích và được sử dụng khá phổ biến nhờ tính đơn giản và linh hoạt. Nó cũng là một ngôn ngữ lập trình có cấu trúc và độc lập với máy.
+
+Được sử dụng để viết các ứng dụng quan trọng khác nhau. Chẳng hạn như các hệ điều hành, cơ sở dữ liệu Oracle và trình thông dịch Python,….
+
+Hãy cùng Nhật Bảo tìm hiểu các vấn đề liên quan đến học lập trình C cho người mới bắt đầu nhé!
+            <hr />
+          </div>
+          <div>
+            <h4>
+              <a href="laptrinhphp.html">Lập trình PHP</a></h4>
+            <img
+                align="left"
+                height="300"
+                src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/59875625-b5d4-4588-a7ad-0cce84a56753.image.png?v=1696316880841"
+                style="margin-left: auto; margin-right: auto"
+                width="350"
+              />&emsp;Nếu là một dân công nghệ, chẳng hẳn bạn đã nghe qua khá nhiều về các ngôn ngữ Java, C#, C++,… Mỗi ngôn ngữ lập trình sẽ có những đặc điểm riêng, và PHP được xem như một ngôn ngữ lập trình rất phổ biến với dân IT. Hãy cùng tìm hiểu PHP là gì để hiểu rõ hơn về ngôn ngữ này cũng như cách để bạn có thể thành thạo nó nhé!
+          <hr>
+            </div>
+            <div>
+                <h4>
+                  <a href="laptrinhpython.html">Lập trình ngôn ngữ Python</a></h4>
+                <img
+                    align="left"
+                    height="300"
+                    src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/e2bdf7fb-7ac1-4e2b-8635-32c0ddaf8b0a.image.png?v=1696329284911"
+                    style="margin-left: auto; margin-right: auto"
+                    width="350"
+                  />&emsp;Python là một ngôn ngữ lập trình được sử dụng rộng rãi trong các ứng dụng web, phát triển phần mềm, khoa học dữ liệu và máy học (ML). Các nhà phát triển sử dụng Python vì nó hiệu quả, dễ học và có thể chạy trên nhiều nền tảng khác nhau. Phần mềm Python được tải xuống miễn phí, tích hợp tốt với tất cả các loại hệ thống và tăng tốc độ phát triển.
+              <hr>
+                </div>
+                <div>
+                    <h4>
+                      <a href="github.html">Làm việc trên Github</a></h4>
+                    <img
+                        align="left"
+                        height="300"
+                        src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/fbb18b1a-4034-43de-bb67-53c7fd4b1533.image.png?v=1696329809658"
+                        style="margin-left: auto; margin-right: auto"
+                        width="350"
+                      />&emsp;GitHub là một dịch vụ cung cấp kho lưu trữ mã nguồn Git dựa trên nền web cho các dự án phát triển phần mềm. GitHub cung cấp cả phiên bản trả tiền lẫn miễn phí cho các tài khoản. Các dự án mã nguồn mở sẽ được cung cấp kho lưu trữ miễn phí. 
+                  <hr>
+                    </div>
+                    <div>
+                        <h4>
+                          <a href="laptrinhgame.html">Sự phát triển của ngành công nghiệp trò chơi điện tử</a></h4>
+                        <img
+                            align="left"
+                            height="300"
+                            src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/d78f5135-72e8-4b7e-94fc-1a5bb4736a44.image.png?v=1696330450063"
+                            style="margin-left: auto; margin-right: auto"
+                            width="350"
+                          />&emsp;Nghề lập trình game vài năm nay đang nổi lên “rần rần”, thu hút sự quan tâm của giới trẻ và trở thành sự lựa chọn của nhiều bạn ngay từ khi còn ngồi trên ghế nhà trường. Và nghề này cũng đang được nhận định sẽ là xu hướng của tương lai.
+                        </div>
+                    
+        </aside>
+      </div>
+
+      <footer>
+        <p>&copy; Copyright © 2023 Nguyễn Huỳnh Nhật Bảo - https://github.com/NguyenHuynhNhatBaocntt. All Rights Reserved.
+Design by Nhat Bao - Windows Phone - Windows 8 - App Store - HTML5 + CSS3</p>
+      </footer>
+    </div>
+  </body>
+</html>

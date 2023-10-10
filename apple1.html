@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Apple đã tìm ra nguyên nhân gây quá nhiệt trên iOS 17, sẽ sớm tung bản vá khắc phục</title>
+    <link rel="stylesheet" href="screen.css" />
+    <link rel="stylesheet" href="hinhanh.css" />
+    <link rel="stylesheet" href="trinhchieu.css" />
+    <link rel="stylesheet" href="hinhanh1.css" />
+    <base href="index.html" />
+    <style>
+      #snowflakeContainer{position:absolute;left:0px;top:0px;}
+      .snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+      .snowflake:hover {cursor:default}
+    </style>
+    <div id='snowflakeContainer'>
+    <p class='snowflake'>❄</p>
+    </div>
+    <script style='text/javascript'>
+      //<![CDATA[
+      var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+      //]]>
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="search">
+        <form>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input
+            type="text"
+            class="search-border"
+            placeholder="Tìm kiếm ..."
+            value=""
+            name="s"
+          /><a href="/en/" />
+          <button class="button">
+            <i class="fa fa-search" style="color: white"
+              ><img
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/6bc7ec86-df44-48f9-83b6-13637163b322.image.png?v=1695364727805"
+                alt=""
+                width="10"
+                height="50"
+                srcset="" /><a></a
+            ></i>
+          </button>
+          <a href="/en/"
+            ><img
+              src="https://imgur.com/HQZJODF.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+          <a href="/"
+            ><img
+              src="https://imgur.com/ddgBAVL.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+        </form>
+      </div>
+    </header>
+    <div class="container">
+      <header>
+        <h2>Nguyen Huynh Nhat Bao's Hello World Page.</h2>
+        <a href="index.html" class="logo"
+          ><img
+            src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/cd8fd9c8-ab50-484a-9b5d-5669dc588f3e.image.png?v=1695866222769"
+            alt=""
+            width="200"
+            height="1000000"
+            srcset=""
+        /></a>
+      </header>
+      <nav class="site-nav">
+        <ul class="group">
+          <li><a href="./index.html">Trang chủ</a></li>
+          <li><a href="job.html">Công Việc</a></li>
+          <li><a href="news.html">Tin tức công nghệ</a></li>
+          <li><a href="ContactUs.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+        <div class="content-area group">
+          <div class="main-area">
+            <h1>
+                Apple đã tìm ra nguyên nhân gây quá nhiệt trên iOS 17, sẽ sớm tung bản vá khắc phục
+            </h1>
+            <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/ad7c6ca6-90cc-4fbf-9c1f-8540b1d4a76b.image.png?v=1696324194669" height="300" width="1000"/>
+            <p>Nhiều người dùng trên toàn thế giới đã ghi nhận trường hợp quá nhiệt trên các thiết bị thuộc dòng iPhone 15 vừa mới ra mắt. Một số nguyên nhân dự đoán cũng đã được đưa ra nhưng không có thông tin nào là chắc chắn. Mới đây, Apple xác nhận đã tìm ra nguyên nhân và sẽ sớm phát hành bản cập nhật sửa lỗi quá nhiệt này.
+                <br><br>
+                Nhà phân tích Ming-Chi Kuo đã cho rằng, nguyên nhân gây quá nhiệt có thể là do thiết kế hệ thống tản nhiệt, chẳng hạn như Apple đã giảm diện tích tản nhiệt cũng như sử dụng phần khung titan đã dẫn đến hiện tượng nói trên. 
+
+                <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/ea5884e6-2207-432d-908c-5cdc5e1736ff.image.png?v=1696326340067" height="200" width="1000"/>
+                Apple cũng đã lên tiếng xác nhận với Forbes rằng công ty đã ghi nhận một số trường hợp iPhone trở nên ấm hơn dự kiến. Thiết bị có thể sẽ nóng hơn trong vài ngày đầu sau khi thiết lập hoặc sao lưu dữ liệu do các hoạt động chạy nền tăng cao.
+<br><br>
+Apple tiết lộ thêm, hãng cũng đã tìm thấy một lỗi trong iOS 17 và sẽ sớm phát hành bản cập nhật phần mềm để sửa lỗi này. Một nguyên nhân khác là do các bản cập nhật của ứng dụng bên thứ ba tăng cao khiến quá tải hệ thống. Apple đang làm việc với các nhà phát triển ứng dụng để sớm khắc phục vấn đề này.
+<br><br>
+Bạn có đang gặp lỗi quá nhiệt khi cập nhật iOS 17 không?
+            </p>
+        </div>
+
+        <aside class="sidebar">
+          <div class="lich">
+            <div id="days"></div>
+            <div id="dates"></div>
+            <div id="times"></div>
+      </div>
+      
+      <style>
+      .lich{
+      padding:20px;
+      background:#f1f1f1;
+      border-radius:10px;
+      font-size:30px;
+      border:2px solid #999;
+      }
+      </style>
+      
+      <script>
+      window.onload = setInterval(clock,1000);
+      function clock()
+      {
+      var d = new Date();
+      var date = d.getDate();
+      var month = d.getMonth();
+      var montharr =["Tháng 1","Tháng 2","tháng 3","Tháng 4","Tháng 5","Tháng 6","Tháng 7","Tháng 8","Tháng 9","Tháng 10","tháng 11","Tháng 12"];
+      month=montharr[month];
+      var year = d.getFullYear();
+      var day = d.getDay();
+      var dayarr =["Chủ Nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"];
+      day=dayarr[day];
+      var hour =d.getHours();
+      var min = d.getMinutes();
+      var sec = d.getSeconds();
+      document.getElementById("days").innerHTML=day;
+      document.getElementById("dates").innerHTML=date+" "+month+" "+year;
+      document.getElementById("times").innerHTML=hour+":"+min+":"+sec;
+      }
+      </script>
+            <h3>Tin tức liên quan</h3>
+          <p>
+            <a href="apple.html"
+              ><img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/0634289a-ec77-4399-819f-231c7f86723f.image.png?v=1696323403865"/>
+            Apple ra mắt iPhone 15 series, giá cao nhất 46,99 triệu đồng cho bản Pro Max 1TB
+          </p>
+        </aside>
+      </div>
+
+      <footer>
+        <p>&copy; Copyright © 2023 Nguyễn Huỳnh Nhật Bảo - https://github.com/NguyenHuynhNhatBaocntt. All Rights Reserved.
+Design by Nhat Bao - Windows Phone - Windows 8 - App Store - HTML5 + CSS3</p>
+      </footer>
+    </div>
+  </body>
+</html>

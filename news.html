@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Công việc</title>
+    <link rel="stylesheet" href="screen.css" />
+    <link rel="stylesheet" href="hinhanh.css" />
+    <link rel="stylesheet" href="trinhchieu.css" />
+    <link rel="stylesheet" href="hinhanh1.css" />
+    <base href="index.html" />
+    <style>
+      #snowflakeContainer{position:absolute;left:0px;top:0px;}
+      .snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+      .snowflake:hover {cursor:default}
+    </style>
+    <div id='snowflakeContainer'>
+    <p class='snowflake'>❄</p>
+    </div>
+    <script style='text/javascript'>
+      //<![CDATA[
+      var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+      //]]>
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="search">
+        <form>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input
+            type="text"
+            class="search-border"
+            placeholder="Tìm kiếm ..."
+            value=""
+            name="s"
+          /><a href="/en/" />
+          <button class="button">
+            <i class="fa fa-search" style="color: white"
+              ><img
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/6bc7ec86-df44-48f9-83b6-13637163b322.image.png?v=1695364727805"
+                alt=""
+                width="10"
+                height="50"
+                srcset="" /><a></a
+            ></i>
+          </button>
+          <a href="/en/"
+            ><img
+              src="https://imgur.com/HQZJODF.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+          <a href="/"
+            ><img
+              src="https://imgur.com/ddgBAVL.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+        </form>
+      </div>
+    </header>
+    <div class="container">
+      <header>
+        <h2>Nguyen Huynh Nhat Bao's Hello World Page.</h2>
+        <a href="index.html" class="logo"
+          ><img
+            src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/cd8fd9c8-ab50-484a-9b5d-5669dc588f3e.image.png?v=1695866222769"
+            alt=""
+            width="200"
+            height="1000000"
+            srcset=""
+        /></a>
+      </header>
+      <nav class="site-nav">
+        <ul class="group">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="job.html">Công Việc</a></li>
+          <li><a href="news.html">Tin tức công nghệ</a></li>
+          <li><a href="ContactUs.html">Liên hệ</a></li>
+        </ul>
+      </nav><br>
+      <script language="javascript" type="text/javascript"> 
+dayName = new Array ("Chủ nhật","Thứ hai","Thứ ba","Thứ tư","Thứ năm","Thứ sáu","Thứ bảy") 
+monName = new Array ("1","2","3","4","5","6","7","8","9","10","11","12") 
+now = new Date 
+document.write("<b>" +dayName[now.getDay()]+ ", " +now.getDate()+ "/" +monName[now.getMonth()]+ "/" +now.getFullYear()+ "</b>") 
+</script>
+      <div class="content-area group">
+        <div class="main-area">
+          <div>
+            <h4>
+              <a href="apple.html">Apple ra mắt iPhone 15 và iPhone 15 Plus</a></h4>
+            </div>
+          <div>
+              <img
+                align="left"
+                height="300"
+                src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/dbe02d09-46ae-4236-9cb8-3d1ee4fc490a.image.png?v=1695894174948"
+                style="margin-left: auto; margin-right: auto"
+                width="70"
+              />&emsp;Bước nhảy vọt cho iPhone với thiết kế mới tuyệt đẹp, gồm mặt lưng bền bỉ làm bằng kính pha màu và cạnh viền bo tròn mới, Dynamic Island, camera Chính 48MP với camera Telephoto 2x, và cổng kết nối USB‑C.<br>
+            <hr />
+          </div>
+          <div>
+            <h4>
+              <a href="xiaomi13t.html">Xiaomi 13T series chính thức: Camera Leica, chống nước IP68, giá từ 12,99 triệu đồng</a></h4>
+            <img
+                align="left"
+                height="300"
+                src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/2d771174-55ab-47de-a082-439cb6337773.image.png?v=1695894596936"
+                style="margin-left: auto; margin-right: auto"
+                width="60"
+              />&emsp;Xiaomi 13T series là dòng sản phẩm T-series đầu tiên của Xiaomi được trang bị camera Leica chất lượng cao.
+          </div>
+          <div>
+          <hr>
+          <h4>
+              <a href="tintucwindown11.html">Windows 11 chính thức ra mắt với 11 tính năng thú vị. Yêu cầu hệ thống và các dòng máy được cập nhật</a></h4>
+          <div>
+          <img
+                align="left"
+                height="300"
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/d69585ed-242d-4ddb-915e-b5756bcbca82.image.png?v=1695840756398"
+                style="margin-left: auto; margin-right: auto"
+                width="350"
+              />&emsp;Microsoft chính thức ra mắt hệ điều hành Windows 11 vào 05/10/2021. Nếu bạn đang háo hức chờ đợi trải nghiệm các tính năng mới trên phiên bản này thì hãy theo dõi bài viết sau, Điện máy XANH sẽ giới thiệu 11 đặc điểm nổi bật của Windows 11 và điều kiện để bạn có thể nâng cấp nhé!
+            <hr />
+          </div>
+          <h4>
+            <a href="apple1.html">Apple đã tìm ra nguyên nhân gây quá nhiệt trên iOS 17, sẽ sớm tung bản vá khắc phục</a></h4>
+        <div>
+        <img
+              align="left"
+              height="300"
+              src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/fa85345e-404e-4fc3-aa9c-e3f99298d74c.image.png?v=16963265225270"
+              style="margin-left: auto; margin-right: auto"
+              width="350"
+            />&emsp;Nhiều người dùng trên toàn thế giới đã ghi nhận trường hợp quá nhiệt trên các thiết bị thuộc dòng iPhone 15 vừa mới ra mắt. Một số nguyên nhân dự đoán cũng đã được đưa ra nhưng không có thông tin nào là chắc chắn. Mới đây, Apple xác nhận đã tìm ra nguyên nhân và sẽ sớm phát hành bản cập nhật sửa lỗi quá nhiệt này.
+          <hr />
+          </div>
+          <h4>
+            <a href="apple2.html">Phía sau quyết định chuyển sang USB-C từ iPhone 15 của Apple</a></h4>
+        <div>
+        <img
+              align="left"
+              height="300"
+              src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/ffd662c7-09e9-460d-92eb-439d0e048086.image.png?v=1696326992821"
+              style="margin-left: auto; margin-right: auto"
+              width="350"
+            />&emsp;Đứng trước lựa chọn tạo ra nhiều loại iPhone hoặc cắt bỏ khe cắm sạc, ông lớn Apple quyết định chuyển toàn bộ sản phẩm của mình sang USB-C để tuân thủ quy định của EU...
+          <hr />
+          </div>
+          </div>
+          </div>
+        <aside class="sidebar">
+          <h1> Có thể bạn đã xém biết !</h1><hr>
+          <h3>
+            28% số người làm việc trong ngành công nghệ thường xuyên "giấu nghề"
+          </h3>
+          <p>
+            <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/f0e611fb-785c-4a75-ae8a-98bde5623e6c.image.png?v=1696680045591"/>
+          </p>
+          <p>
+            Thực tế này đến từ việc những người làm trong ngành công nghệ quá thường xuyên phải sửa chữa, khắc phục miễn phí sự cố cho những người họ quen biết.
+          </p>
+          <hr>
+          <h3>
+            Logo đầu tiên của Apple không giống như những gì bạn nghĩ !
+          </h3>
+          <p>
+            <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/63798e60-7078-4016-862d-732850aa135c.image.png?v=1696680143180"/>
+          </p>
+          <p>
+            Logo của Apple hiện tại, với một quả táo bị cắn một góc là hình ảnh dễ dàng nhận biết ở bất kỳ đâu. Nó được tạo ra bởi nhà thiết kế đồ họa Rob Janoff vào năm 1977 và đã tồn tại trong nhiều năm kể từ đó. Nhưng bạn có biết rằng đó không phải là logo đầu tiên được công ty sử dụng?
+<br>
+            Ronald Wayne, người đồng sáng lập Công ty Máy tính Apple cùng với Steve Jobs và Steve Wozniak, đã thiết kế logo đầu tiên của công ty. Bản phác thảo đen trắng minh họa Ngài Isaac Newton đang ngồi dưới gốc cây táo, hoàn chỉnh với một câu trích dẫn của nhà thơ người Anh có nội dung “Newton… một trí óc mãi mãi du hành qua những vùng biển suy nghĩ kỳ lạ… một mình.”
+            <br>
+            Tuy nhiên, Jobs không hoàn toàn hài lòng với logo và muốn một thứ gì đó dễ tái tạo hơn với kích thước nhỏ. Ông cũng được cho là muốn tên và logo của công ty được “ hợp nhất làm một ”. Đầu năm 1977, ông ủy quyền cho công ty Marketing Regis McKenna - và cụ thể là Janoff - thiết kế một logo mới. Vào tháng 4 cùng năm, logo Apple cầu vồng mang tính biểu tượng đã xuất hiện lần đầu tiên cùng với máy tính Apple II.
+          </p>
+          <hr>
+          <h3>
+            Chuyện không tưởng tên mục thư rác của e-mail được đặt theo tên thịt hộp.
+          </h3>
+          <p>
+            <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/43c1d8cf-493a-4692-860f-51a9646421ab.image.png?v=1696680289636"/>
+          </p>
+          <p>
+            Tua nhanh đến năm 1970 khi bản phác thảo Monty Python nổi tiếng lấy Spam làm trọng tâm. Tóm lại, từ “spam” đã được lặp đi lặp lại nhiều lần, không nghi ngờ gì nữa, liên quan đến tính phổ biến được nhận thức của nó. Vào đầu những năm 90, khi những tin nhắn không được yêu cầu đầu tiên bắt đầu được gửi đi hàng loạt, nó đã nhắc nhở một người dùng nhóm tin Usenet về tiểu phẩm spam từ Monty Python.
+<br>
+            Từ đây, từ “spam” thường được sử dụng để chỉ các thông tin liên lạc không được yêu cầu hoặc thực hiện một hành động lặp đi lặp lại.
+          </p>
+          <hr>
+          <h3>
+            Chuyện không thể nhưng hoàn toàn có thật "Chuột máy tính đầu tiên trên thế giới được làm bằng gỗ".
+          </h3>
+          <p>
+            <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/4521c6b2-2cea-4f1d-b486-b3e977ef2311.image.png?v=1696679928046"/>
+          </p>
+          <p>
+            Chú chuột này ra đời năm 1964 dưới bàn tay của Doug Engelbard, một nhà sáng chế, kỹ sư người Mỹ. Trong suốt sự nghiệp của mình, Engelbard còn cống hiến rất nhiều điều cho ngành công nghiệp máy tính. Ông qua đời ngày 2 tháng 7 năm 2013. Tới nay, chuột máy tính vẫn là một trong những thiết bị ngoại vi không thể thiếu.
+          </p>
+          <hr>
+          <h3>
+            Garage xe hơi là điểm bắt đầu của rất nhiều “huyền thoại” công nghệ.
+          </h3>
+          <p>
+            <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/e2de54b3-a703-4d18-9958-e479948e899d.image.png?v=1696679690379"/>
+          </p>
+          <p>
+            HP, Google, Microsoft và Apple đều bắt đầu chặng đường của mình từ những chiếc garage xe hơi. Có vẻ như trong những ngày đầu của thung lũng Silicon, garage là một “mảnh đất” nhiều may mắn để khởi nghiệp.
+          </p>
+          <hr>
+          <h3>
+            Trẻ em ngày nay biết sử dụng chuột trước khi biết buộc dây giày !
+          </h3>
+          <p>
+            <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/419fb9de-068a-4a42-a3f9-c182fe485d73.image.png?v=1696679543728"/>
+          </p>
+          <p>
+Theo thống kê đăng tải trên tờ Telegraph, 69% trẻ em biết sử dụng chuột máy tính trước khi biết buộc dây giày và 58% biết chơi games trước khi biết đi xe đạp.
+          </p>
+        </aside>
+      </div>
+
+      <footer>
+        <p>
+          &copy; Copyright © 2023 Nguyễn Huỳnh Nhật Bảo -
+          https://github.com/NguyenHuynhNhatBaocntt. All Rights Reserved. Design by
+          Nhat Bao - Windows Phone - Windows 8 - App Store - HTML5 + CSS3
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

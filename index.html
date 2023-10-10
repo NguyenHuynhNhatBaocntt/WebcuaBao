@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Web cua Nhat Bao ne</title>
+    <link rel="stylesheet" href="screen.css" />
+    <link rel="stylesheet" href="hinhanh.css" />
+    <link rel="stylesheet" href="trinhchieu.css" />
+    <link rel="stylesheet" href="hinhanh1.css" />
+    <base href="index.html" />
+    <style>
+      #snowflakeContainer{position:absolute;left:0px;top:0px;}
+      .snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+      .snowflake:hover {cursor:default}
+    </style>
+    <div id='snowflakeContainer'>
+    <p class='snowflake'>❄</p>
+    </div>
+    <script style='text/javascript'>
+      //<![CDATA[
+      var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+      //]]>
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="search">
+        <form>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input
+            type="text"
+            class="search-border"
+            placeholder="Tìm kiếm ..."
+            value=""
+            name="s"
+          /><a href="/en/" />
+          <button class="button">
+            <i class="fa fa-search" style="color: white"
+              ><img
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/6bc7ec86-df44-48f9-83b6-13637163b322.image.png?v=1695364727805"
+                alt=""
+                width="10"
+                height="50"
+                srcset="" /><a></a
+            ></i>
+          </button>
+          <a href="/en/"
+            ><img
+              src="https://imgur.com/HQZJODF.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+          <a href="/"
+            ><img
+              src="https://imgur.com/ddgBAVL.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+        </form>
+      </div>
+    </header>
+    <div class="container">
+      <header>
+        <h2>Nguyen Huynh Nhat Bao's Hello World Page.</h2>
+        <a href="index.html" class="logo"
+          ><img
+            src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/cd8fd9c8-ab50-484a-9b5d-5669dc588f3e.image.png?v=1695866222769"
+            alt=""
+            width="200"
+            height="1000000"
+            srcset=""
+        /></a>
+      </header>
+      <nav class="site-nav">
+        <ul class="group">
+          <li><a href="./index.html">Trang chủ</a></li>
+          <li><a href="./job.html">Công Việc</a></li>
+          <li><a href="./news.html">Tin tức công nghệ</a></li>
+          <li><a href="./ContactUs.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+      <script language="javascript" type="text/javascript"> 
+dayName = new Array ("Chủ nhật","Thứ hai","Thứ ba","Thứ tư","Thứ năm","Thứ sáu","Thứ bảy") 
+monName = new Array ("1","2","3","4","5","6","7","8","9","10","11","12") 
+now = new Date 
+document.write("<b>" +dayName[now.getDay()]+ ", " +now.getDate()+ "/" +monName[now.getMonth()]+ "/" +now.getFullYear()+ "</b>") 
+</script> 
+
+      <header>
+        <div>
+          <img
+            class="mySlides2 animate-fading"
+            src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/d69585ed-242d-4ddb-915e-b5756bcbca82.image.png?v=1695840756398"
+          /><img
+            class="mySlides2 animate-fading"
+            src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/daf15fc3-2fd0-4fdf-96c4-0c810072842f.image.png?v=1695841160395"
+          />
+          <img
+            class="mySlides2 animate-fading"
+            src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/e64bf961-5ea3-4e2f-8a3d-3cc115a5a37f.image.png?v=1695841378694https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/e64bf961-5ea3-4e2f-8a3d-3cc115a5a37f.image.png?v=1695841378694"
+          />
+          <img
+            class="mySlides2 animate-fading"
+            src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/d1a4bd96-4def-4243-bb67-8752e185e0d2.image.png?v=1695840842291"
+          />
+          <img
+            class="mySlides2 animate-fading"
+            src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/c3dffeeb-a606-42c5-b15c-288b01fb21e7.image.png?v=1695840950018"
+          />
+        </div>
+        <script>
+          var myIndex = 0;
+          carousel2();
+          function carousel2() {
+            var i;
+            var x = document.getElementsByClassName("mySlides2");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+              myIndex = 1;
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel2, 7000);
+          }
+        </script>
+      </header>
+
+      <div class="content-area group">
+        <div class="main-area">
+          <p><video src="https://cdn.glitch.global/a02245d7-675a-409b-8780-e467a692156a/webcuaBao.mp4?v=1696952443377" height="400" width="600" controls>Video not supported</video></p>
+          <h2>Lời mở đầu</h2>
+
+          <h4>Hello world ! Welcome to my world.</h4>
+          <p>
+            Những năm gần đây, vai trò của hệ thống thông tin trong doanh nghiệp ngày càng phát triển mạnh mẽ hơn. Từ chỗ chỉ được sử dụng để hỗ trợ một số hoạt động trong văn phòng và hệ thống Hệ thống thông tin đã trở thành một vai trò chiến lược trong doanh nghiệp. Đặc biệt là các thành phố Những thành tựu về công nghệ thông tin (CNTT) đã khiến các doanh nghiệp ngày càng chú ý áp dụng chúng để tăng lợi thế cạnh tranh và tạo cơ hội cho chính mình. Hiện nay, xu hướng Ứng dụng thành tựu CNTT không chỉ giới hạn ở các doanh nghiệp lớn, đa quốc gia mà còn lan rộng ở tất cả các doanh nghiệp, trong đó có các doanh nghiệp vừa và nhỏ ở các nước đang phát triển ở Việt Nam. Tuy nhiên, việc áp dụng các thành tựu CNTT không hề đơn giản ngay cả đối với những Doanh nghiệp lớn có nguồn lực tài chính, nhân lực và kinh nghiệm dồi dào. Ứng dụng thành công Thành công ở doanh nghiệp này không đảm bảo thành công tương tự ở doanh nghiệp khác. Vì vậy, nhiệm vụ của nhóm đó là tìm hiểu về “Ứng dụng hệ thống Bảo hành điện tử của SonyMobile tại Việt Nam” để có cái nhìn sâu hơn, thực tế hơn về thông tin ứng dụng hệ thống trong hoạt động kinh doanh. Từ đó, nhóm rút ra một số kết luận Ưu, nhược điểm của hệ thống, kinh nghiệm triển khai ứng dụng và mối liên hệ giữa các khía cạnh đạo đức và xã hội trong hệ thống thông tin quản lý. Vì thời gian thực hiện không nhiều, chắc chắn là còn có còn nhiều thiếu sót, mong bạn hướng dẫn thêm. Xin chân thành cảm ơn!
+          </p>
+
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img
+            src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/front-end-developers-openings_680x428.gif?v=1695841534411"
+            alt=""
+            width="500"
+            height="150"
+            srcset=""
+          />
+          <h2>Thông tin cơ bản </h2>
+          <p>
+            Tôi tên là Nguyễn Huỳnh Nhật Bảo. Tôi 20 tuổi và là một lập trình viên máy tính. Tôi sinh ra ở Thành phố Hồ Chí Minh. Từ nhỏ tôi đã sống ở thành phố Quy Nhon được 11 năm. Hiện nay tôi đang học tập và làm việc tại Thành phố Hồ Chí Minh. Tôi là con út trong một gia đình. Tôi có niềm đam mê và yêu thích công nghệ thông tin từ khi còn nhỏ. Từ nhỏ tôi đã được tiếp xúc với máy tính và rất yêu thích công việc này.
+          </p>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img
+            src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/front-end-development.gif?v=1695841818372"
+            alt=""
+            width="500"
+            height="150"
+            srcset=""
+          />
+          <h4>Personality when working with Bao.</h4>
+
+          <ul>
+            <li>Nhiệt tình quan tâm đến khách hàng</li>
+            <li>Tôn trọng ý kiến những người xung quanh</li>
+            <li>Luôn vui vẻ và thân thiện</li>
+            <li>Luôn vui vẻ và thân thiện</li>
+            <li>Luôn xây dựng mối quan hệ tốt với khách hàng</li>
+            <li>Trách nhiệm với công việc</li>
+          </ul>
+          <header>
+            <h3>Châm ngôn</h3><br>
+            <div class="custom_monials">
+              <blockquote>
+                <span class="open">
+                  "Quý nhi bất kiêu,<br>thắng nghi bất bội,<br>hiền nhi năng hạ,<br>cương
+                  nhi năng nhẫn"
+                </span>
+              </blockquote>
+              <img
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/3c9cddd4-28a8-431a-84fd-4c0806ef2ad5.image.png?v=1695721279032"
+                height="50"
+                width="50"
+              />
+              Gia Cat Luong
+            </div>
+          </header>
+          <div><h3>Hãy nghe bản nhạc này của tôi</h3>
+            <audio controls autoplay>
+              <source src="file:///C:/Users/HP/Videos/y2meta.com%20-%20Jang%20Nara%20-%20Sweet%20Dream%20(Yang%20Remix)_%20Nh%E1%BA%A1c%20Guitar%20Chill%20Remix%20%C4%90%C3%B3n%20T%E1%BA%BFt%20Hot%20Tiktok%202024%20(128%20kbps).mp3" type="audio/ogg">
+              <source src="file:///C:/Users/HP/Videos/y2meta.com%20-%20Jang%20Nara%20-%20Sweet%20Dream%20(Yang%20Remix)_%20Nh%E1%BA%A1c%20Guitar%20Chill%20Remix%20%C4%90%C3%B3n%20T%E1%BA%BFt%20Hot%20Tiktok%202024%20(128%20kbps).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio>
+            </div>
+        </div>
+        <aside class="sidebar">
+          <h3>
+            Vẻ đẹp của Lập trình !
+              </h3>
+          <img
+            src="https://cdn.glitch.me/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/GXDI0662.gif?v=1695908499467"
+          />
+        </aside>
+        <aside class="sidebar">
+          <p>
+            Code convention (hay Code standards) hiểu đơn giản là một tập các quy tắc chuẩn khi lập trình một ngôn ngữ cụ thể. Những quy tắc này bao gồm: cách tổ chức file, thụt lề, hướng dẫn comment, khai báo biến, quy tắc viết câu lệnh, khoảng trắng, quy tắc đặt tên, nguyên tắc lập trình phần mềm …<br><br> <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/ca6dfb76-347a-4a2b-b473-0ba2f83e1fe5.image.png?v=1695909063290"/>
+            Khi một lập trình viên tham gia một dự án lớn bắt buộc phải có một chuẩn code rõ ràng giúp team có thể đọc và sửa code lẫn nhau. Các quy ước có thể được cụ thể hóa để làm đẹp code trong một bộ tài liệu mà nhóm hoặc công ty phải tuân theo.<br><br>
+            Các quy tắc lập trình giúp nâng cao hiệu suất làm việc cá nhân từ đó giúp nâng cao hiệu suất làm việc của tập thể. Có một chuẩn rõ ràng sẽ giúp một file code mạch lạc, dễ đọc và dễ chỉnh sửa. Đây là một lợi thế cho lập trình viên trước nhà tuyển dụng.
+          </p>
+        </aside>
+        <aside class="sidebar">
+          <p>
+            <h3>
+              Bài Viết Liên Quan
+          </h3>
+            <a href="./laptrinhjava.html"
+              ><img
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/developpement_java_maroc.gif?v=1695842158481"
+            /></a>
+          </p>
+        </aside>
+        <aside class="sidebar">
+          <p>
+            Java là ngôn ngữ lập trình được sử dụng rộng rãi để mã hóa các ứng dụng web. Ngôn ngữ này đã là ngôn ngữ phổ biến trong số các nhà phát triển trong hơn 2 thập kỷ. 
+          </p>
+        </aside>
+      <aside class="sidebar">
+        <h3>
+          Thời tiết hôm nay
+        </h3>
+          <p>
+            <div class="thoitiet">
+	<div class="searchtiet" style="display:flex;margin-bottom:20px;">
+      <input type="text" class="search-bar" id="otiet" placeholder="Tìm kiếm địa điểm">
+      <button id="timtiet">Tìm</button>
+	</div>
+	<div class="weather loading">
+      <div class="city"></div>
+      <div class="temp"></div>
+      <img class="may" src="https://openweathermap.org/img/wn/04n.png" alt="" />
+      <div class="description"></div>
+      <div><span class="humidity"></span></div>
+      <div><span class="wind"></span></div>
+	</div>
+</div>
+  
+<style>
+.thoitiet{
+background:#000000;
+padding:20px;
+color:#fff;
+border-radius:10px;
+font-family:arial;
+font-size:18px;
+}
+#otiet{
+background:#fff;
+padding:10px;
+width:100%;
+border:none;
+}
+#timtiet{
+background:#666;
+border:none;
+color:#fff;
+}
+</style>
+  
+<script>
+let weather = {
+  apiKey: "062d92a2646152d39eb7845a608226cb",   
+  fetchWeather: function (city) {
+    fetch(
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
+        city +
+        "&lang=vi&units=metric&appid=" +
+        this.apiKey
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Không có địa điểm");
+        }
+        return response.json();
+      })
+      .then((data) => this.displayWeather(data));
+  },
+  displayWeather: function (data) {
+    const { name } = data;
+    const { icon, description } = data.weather[0];
+    const { temp, humidity } = data.main;
+    const { speed } = data.wind;
+	const { country } = data.sys;
+    document.querySelector(".city").innerText = name + " , " + country;
+    document.querySelector(".may").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+    document.querySelector(".description").innerText = description;
+    document.querySelector(".temp").innerText = temp + "°C";
+    document.querySelector(".humidity").innerText =
+      "Độ ẩm: " + humidity + "%";
+    document.querySelector(".wind").innerText =
+      "Gió: " + speed + " km/h";
+  },
+  search: function () {
+    this.fetchWeather(document.querySelector(".search-bar").value);
+  },
+};
+
+document.querySelector(".searchtiet button").addEventListener("click", function () {
+  weather.search();
+});
+
+document
+  .querySelector(".search-bar")
+  .addEventListener("keyup", function (event) {
+    if (event.key == "Enter") {
+      weather.search();
+    }
+  });
+weather.fetchWeather("ha noi");
+</script>
+        </p>
+      </aside>
+      </div>
+      <footer>
+        <p>
+          &copy; Copyright © 2023 Nguyễn Huỳnh Nhật Bảo -
+          https://github.com/NguyenHuynhNhatBaocntt. All Rights Reserved. Design by
+          Nhat Bao - Windows Phone - Windows 8 - App Store - HTML5 + CSS3
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

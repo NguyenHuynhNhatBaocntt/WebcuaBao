@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lập trình ngôn ngữ C</title>
+    <link rel="stylesheet" href="screen.css" />
+    <link rel="stylesheet" href="hinhanh.css" />
+    <link rel="stylesheet" href="trinhchieu.css" />
+    <link rel="stylesheet" href="hinhanh1.css" />
+    <base href="index.html" />
+    <style>
+      #snowflakeContainer{position:absolute;left:0px;top:0px;}
+      .snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+      .snowflake:hover {cursor:default}
+    </style>
+    <div id='snowflakeContainer'>
+    <p class='snowflake'>❄</p>
+    </div>
+    <script style='text/javascript'>
+      //<![CDATA[
+      var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+      //]]>
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="search">
+        <form>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input
+            type="text"
+            class="search-border"
+            placeholder="Tìm kiếm ..."
+            value=""
+            name="s"
+          /><a href="/en/" />
+          <button class="button">
+            <i class="fa fa-search" style="color: white"
+              ><img
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/6bc7ec86-df44-48f9-83b6-13637163b322.image.png?v=1695364727805"
+                alt=""
+                width="10"
+                height="50"
+                srcset="" /><a></a
+            ></i>
+          </button>
+          <a href="/en/"
+            ><img
+              src="https://imgur.com/HQZJODF.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+          <a href="/"
+            ><img
+              src="https://imgur.com/ddgBAVL.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+        </form>
+      </div>
+    </header>
+    <div class="container">
+      <header>
+        <h2>Nguyen Huynh Nhat Bao's Hello World Page.</h2>
+        <a href="index.html" class="logo"
+          ><img
+            src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/cd8fd9c8-ab50-484a-9b5d-5669dc588f3e.image.png?v=1695866222769"
+            alt=""
+            width="200"
+            height="1000000"
+            srcset=""
+        /></a>
+      </header>
+      <nav class="site-nav">
+        <ul class="group">
+          <li><a href="./index.html">Trang chủ</a></li>
+          <li><a href="job.html">Công Việc</a></li>
+          <li><a href="news.html">Tin tức công nghệ</a></li>
+          <li><a href="ContactUs.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+        <div class="content-area group">
+          <div class="main-area">
+            <h2>
+              Ngôn ngữ lập trình C là gì?
+            </h2>
+            <p>
+              Ngôn ngữ C được sử dụng để tạo ra các ứng dụng hệ thống tương tác trực tiếp với các thiết bị phần cứng. Ví dụ như trình điều khiển, nhân hệ điều hành,… Nó được phát triển bởi nhà khoa học máy tính người Mỹ – Dennis Ritchie.<br>
+              Ngôn ngữ lập trình C còn được xem là cơ sở cho các ngôn ngữ lập trình khác. Do đó, nó còn được gọi là “ngôn ngữ mẹ”.<br>
+              <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/5d15f655-16d2-4ac6-8791-8d834a2406be.image.png?v=1695878092193"/><br>
+              Bạn có thể xác định ngôn ngữ C bằng những cách như sau:
+            </p>
+            <ul>
+              <li>Ngôn ngữ mẹ</li>
+              <li>Ngôn ngữ lập trình hệ thống</li>
+              <li>Ngôn ngữ lập trình thủ tục</li>
+              <li>Ngôn ngữ lập trình có cấu trúc</li>
+              <li>Ngôn ngữ lập trình cấp trung</li>
+            </ul>
+            <h3>
+              1. C như là một ngôn ngữ mẹ
+            </h3>
+            <p>
+              Ngôn ngữ C còn được xem là ngôn ngữ mẹ của tất cả các ngôn ngữ lập trình hiện đại khác. Bởi hầu hết các trình biên dịch, máy ảo Java, nhân hệ điều hành, … đều được viết bằng ngôn ngữ C.<br><br><br>
+
+Hầu hết các ngôn ngữ lập trình đều tuân theo cú pháp của ngôn ngữ C, chẳng hạn như, C++, Java, C#,…Nó cung cấp các khái niệm cốt lõi như mảng, chuỗi, hàm, đặc tả tập tin,… đang được sử dụng trong nhiều ngôn ngữ khác như C++, Java, C#,…
+            </p>
+            <h3>
+              2. C như một ngôn ngữ lập trình hệ thống
+            </h3>
+            <p>
+              Ngôn ngữ lập trình hệ thống được sử dụng để tạo ra phần mềm hệ thống. Ngôn ngữ C là ngôn ngữ lập trình hệ thống bởi nó có thể được sử dụng để lập trình cấp thấp (ví dụ như trình điều khiển hoặc nhân hệ điều hành).<br><br><br>
+
+Nó thường được sử dụng để tạo ra thiết bị phần cứng, hệ điều hành, trình điều khiển, nhân hệ điều hành,… Ví dụ như nhân hệ điều hành Linux được viết bằng ngôn ngữ C. Không thể sử dụng các ngôn ngữ khác như Java, .Net, PHP,… để lập trình nó.
+            </p>
+            <h3>
+              3. C như một ngôn ngữ thủ tục
+            </h3>
+            <p>
+              Các “thủ tục” bao gồm hàm, phương thức, quy trình, chương trình con,… Ngôn ngữ thủ tục chỉ định một chuỗi các bước để lập trình có thể giải quyết vấn đề. Ngôn ngữ thủ tục chia nhỏ lập trình thành các hàm, cấu trúc dữ liệu,…
+<br><br>
+C là một ngôn ngữ thủ tục. Trong C, bạn phải khai báo các biến và các nguyên mẫu hàm trước khi sử dụng chúng.
+            </p>
+            <h3>
+              4. C như một ngôn ngữ lập trình có cấu trúc
+            </h3>
+            <p>
+              Ngôn ngữ lập trình có cấu trúc là một tập hợp con của ngôn ngữ có cấu trúc. “Cấu trúc” nghĩa là chia nhỏ một lập trình thành nhiều phần hoặc nhiều khối để dễ hiểu hơn.
+<br><br>
+Trong ngôn ngữ C, chúng tôi chia nhỏ lập trình thành nhiều phần bằng cách sử dụng các hàm. Điều này giúp cho lập trình trở nên dễ hiểu và dễ sửa đổi hơn.
+            </p>
+            <h3>
+              5. C như một ngôn ngữ lập trình cấp trung
+            </h3>
+            <p>
+              C được xem là ngôn ngữ lập trình cấp trung bởi nó hỗ trợ tính năng cho cả ngôn ngữ cấp thấp và ngôn ngữ cấp cao. Lập trình ngôn ngữ C được chuyển thành các mã hợp ngữ. Nó hỗ trợ cho con trỏ (cấp thấp) nhưng nó độc lập với máy (tính năng của cấp cao).
+<br><br>
+Ngôn ngữ cấp thấp dành riêng cho một máy, tức là phụ thuộc vào máy. Nó phụ thuộc vào máy, chạy nhanh nhưng không dễ hiểu. Bên cạnh đó, ngôn ngữ cấp cao không dành riêng cho một máy, tức là độc lập với máy và rất dễ hiểu.
+            </p>
+            <h2>
+              Ứng dụng chính của ngôn ngữ lập trình C
+            </h2>
+            <p>
+              Dưới đây là các ứng dụng cụ thể của C:
+            </p>
+            <ul>
+              <li>Ngôn ngữ C được sử dụng rộng rãi trong các hệ thống nhúng</li>
+              <li>Để phát triển các ứng dụng hệ thống</li>
+              <li>Ngôn ngữ C được sử dụng rộng rãi để phát triển các ứng dụng trên desktop</li>
+              <li>Hầu hết các ứng dụng của Adobe đều được phát triển bằng cách sử dụng ngôn ngữ lập trình C</li>
+              <li>Để phát triển các trình duyệt và các tiện ích mở rộng của chúng. Chromium của Google được xây dựng bằng cách sử dụng ngôn ngữ lập trình C</li>
+              <li>Sử dụng để phát triển các cơ sở dữ liệu. MySQL là phần mềm cơ sở dữ liệu phổ biến nhất được xây dựng bằng ngôn ngữ lập trình C.</li>
+              <li>Phát triển hệ điều hành. Các hệ điều hành như Apple’s OS X, Microsoft’s Windows, và Symbian đều được phát triển bằng ngôn ngữ C. Nó được sử dụng để phát triển hệ điều hành của desktop cũng như điện thoại di động.</li>
+              <li>Tạo ra hình biên dịch</li>
+              <li>Sử dụng rộng rãi trong các ứng dụng của nền tảng IOT (Internet vạn vật).</li>
+            </ul>
+            <h2>
+              Tại sao phải học ngôn ngữ C?
+            </h2>
+            <p>
+              Như bạn đã biết, C chính là ngôn ngữ cơ sở của nhiều ngôn ngữ lập trình.
+
+Do đó, bên cạnh việc học các ngôn ngữ lập trình khác thì học ngôn ngữ C chính là một việc làm rất cần thiết. Bởi nó chia sẻ các khái niệm giống nhau, như kiểu dữ liệu, toán tử, cầu lệnh điều khiển,…
+<br><br>
+C có thể được sử dụng rộng rãi trong rất nhiều ứng dụng. Nó là một ngôn ngữ đơn giản và cung cấp khả năng thực thi cao hơn. Bên cạnh đó, thị trường lao động hiện nay cũng cần khá nhiều nhân lực developer lập trình C.
+<br><br>
+C là một ngôn ngữ lập trình có cấu trúc. Trong đó, lập trình được chia thành nhiều mô-đun khác nhau. Mỗi mô-đun có thể được viết riêng biệt và sau đó, bạn có thể ghép chúng lại để tạo thành một lập trình C độc lập. Cấu trúc này giúp cho bạn dễ dàng kiểm tra, bảo trì và gỡ lỗi lập trình.
+              <br><br>
+              Ngôn ngữ C chứa 32 từ khóa, nhiều kiểu dữ liệu và một tập hợp các hàm được xây dựng sẵn giúp lập trình chạy hiệu quả hơn.
+<br><br>
+Một tính năng khác của lập trình C chính là nó có thể tự mở rộng được. Lập trình C chứa nhiều hàm khác nhau và chúng là một phần của thư viện. Bạn có thể thêm các tính năng và hàm vào thư viện này.
+<br><br>
+Bên cạnh đó, bạn cũng có thể truy cập và sử dụng những hàm này bất cứ khi nào. Tính năng này sẽ giúp đơn giản hóa quá trình làm việc với những lập trình phức tạp.
+<br><br>
+Nhiều trình biên dịch khác nhau có sẵn và được sử dụng để thực thi các lập trình được viết bằng ngôn ngữ này.
+<br><br>
+Nó là ngôn ngữ có tính khả chuyển cao. Điều này có nghĩa là các lập trình được viết bằng ngôn ngữ C có thể chạy trên nhiều máy khác.Tính năng này rất cần thiết khi bạn muốn sử dụng hoặc thực thi code trên nhiều máy khác nhau.
+            </p>
+            <h2>
+              C hoạt động như thế nào?
+            </h2>
+            <p>
+              Ví dụ:
+#include iostream
+using namespace std;
+<br><br>
+int main() {
+cout “Hello World!”;
+return 0;
+}
+<br><br>
+              Sau quá trình biên dịch, trình liên kết sẽ kết hợp với các tệp đối tượng khác nhau và tạo ra tệp thực thi duy nhất để chạy lập trình. Sơ đồ dưới đây thể hiện việc thực thi của lập trình C.
+              <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/d5ee41d3-57e1-49e2-b1cf-e1594e5724ad.image.png?v=1695879491887"/>
+              Hiện nay, nhiều trình biên dịch khác nhau trực tuyến có sẵn và bạn có thể dễ dàng sử dụng chúng. Chức năng của các trình biên dịch không khác nhau và hầu hết chúng đều cung cấp các tính năng cần thiết để thực thi các lập trình ‘C’ và ‘C++’.
+<br><br>
+Dưới đây là danh sách các trình biên dịch trực tuyến phổ biến hiện nay:
+            </p>
+            <ul>
+              <li>Trình biên dịch Clang</li>
+              <li>MinGW ( bộ trình biên dịch GNU cho Window)</li>
+              <li>Trình biên dịch Portable C</li>
+              <li>Turbo C</li>
+            </ul>
+            <h2>
+              Điểm mạnh và điểm yếu của C
+            </h2>
+            <p>
+              Dù ngôn ngữ C được sử dụng phổ biến trong các lập trình. Thế nhưng, bên cạnh những điểm mạnh vượt trội thì C cũng có những điểm yếu nhất định.
+            </p>
+            <h3>
+              Điểm mạnh
+            </h3>
+            <p>
+              Dưới đây là 5 điểm mạnh chính của ngôn ngữ lập trình C:
+            </p>
+            <ol>
+              <li>Ngôn ngữ C là một khối được xây dựng sẵn dành cho các ngôn ngữ lập trình khác. Ngôn ngữ C có rất nhiều kiểu dữ liệu cũng như các toán tử có sức ảnh hưởng.<br>
+Do đó, các lập trình được viết bằng học lập trình c cơ bản cho người mới bắt đầu thường hiệu quả, nhanh chóng và dễ hiểu.</li>
+              <li>C là ngôn ngữ có tính khả chuyển cao. Điều này có nghĩa là lập trình C được viết trên mày này có thể dễ dàng chạy trên máy khác mà không cần thực hiện bất cứ thay đổi nào.</li>
+              <li>Chỉ có 32 từ khóa trong tiêu chuẩn ANSI C và các hàm được xây dựng sẵn. Nhiều hàm tiêu chuẩn sẵn có và có thể được sử dụng để phát triển lập trình.</li>
+              <li>Một ưu điểm quan trọng khác của ngôn ngữ C chính là nó có khả năng tự mở rộng. Về cơ bản, lập trình C là một tập hợp các hàm được hỗ trợ bởi thư viện C.<br>
+Do đó, bạn có thể dễ dàng thêm các hàm của mình vào thư viện C. Thư viện có thể chứa lượng lớn các hàm nên tác vụ lập trình trở nên đơn giản hơn.</li>
+              <li>Ngôn ngữ C là một ngôn ngữ lập trình có cấu trúc. Điều này giúp người dùng sẽ nghĩ đến các mô-đun hoặc khối hàm. Tập hợp các mô-đun này sẽ tạo nên một lập trình hoàn thiện. Cấu trúc mô-đun này giúp cho việc gỡ lỗi, kiểm tra và bảo trì lập trình trở nên dễ dàng hơn.</li>
+            </ol>
+            <h3>
+              Điểm yếu
+            </h3>
+            <p>
+              5 điểm yếu chính của ngôn ngữ C bao gồm:
+            </p>
+            <ol>
+              <li>C không có khái niệm của OOP (Lập trình hướng đối tượng). Đó là lý do tại sao người ta phát triển ngôn ngữ C++</li>
+              <li>rong ngôn ngữ C, không có kiểm tra thời gian chạy</li>
+              <li>Không kiểm tra loại nghiêm ngặt. Ví dụ, bạn có thể truyền một giá trị số nguyên (integer value) cho kiểu dữ liệu float</li>
+              <li>C không có khái niệm về không gian tên</li>
+              <li>C không có khái niệm về hàm tạo hoặc hàm hủy.</li>
+            </ol>
+            <h2>
+              7 nguyên tắc học lập trình C cho người mới bắt đầu
+            </h2>
+            <p>
+              Sau đây là 7 nguyên tắc trong học lập trình C cho người mới bắt đầu cần nắm:
+            </p>
+            <h3>
+              1 Đơn Giản
+            </h3>
+            <p>
+              Một trong những ưu điểm tuyệt vời của ngôn ngữ C là tính minh bạch và đơn giản. Vì vậy bạn nên tránh viết những nội dung trừu tượng phức tạp để quá trình chỉnh sửa sau này, tránh sử dụng macro, typedef để ẩn con trỏ hoặc tránh viết “struct”.
+            </p>
+            <h3>
+              2 Nhận biết và tránh các mẫu nguy hiểm.
+            </h3>
+            <p>
+              Bạn nên tính toán lượng không gian bạn cần để phân bổ dữ liệu hợp lý thay vì sử dụng bộ đệm có kích thước cố định. Và đọc các Manual page để nắm được các chức năng sử dụng cũng như cách xử lý lỗi nếu có.
+            </p>
+            <h3>
+              3 Sắp xếp các mã cẩn thận
+            </h3>
+            <p>
+              Bạn nên triển khai các mã của mình thành các thư mục triển khai một số nhóm chức năng và mỗi chức năng được tạo một tệp riêng, tách các đoạn mã liên quan riêng biệt đặt vào các mục (file) riêng biệt, sử dụng static functions để sắp xếp lại đoạn mã của bạn được logic.
+              <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/5530b6d8-2f82-4bfd-ae31-9d1d01ef4e71.image.png?v=1695880214470"/>
+            </p>
+            <h3>
+              4 Chỉ sử dụng các tính năng tiêu chuẩn.
+            </h3>
+            <p>
+              Khi mới học lập trình bạn không được nhầm lẫn và mặc định một số tính năng như: mặc định đây là nền tảng (platform) Linux, xem trình biên dịch (compiler) là gcc hay mặc định cấu trúc (architecture) là x86.
+            </p>
+            <h3>
+              5 Áp dụng quy trình làm việc có kỷ luật.
+            </h3>
+            <p>
+              Để bạn có thể kiểm soát được phiên bản lập trình thông qua viết commit messages – giải thích ngắn gọn sự thay đổi ở dòng đầu tiên và xác định mục tiêu rõ ràng khi làm việc tại feature branches
+            </p>
+            <h3>
+              6 Thực hiện kiểm tra và đánh giá nghiêm ngặt.
+            </h3>
+            <p>
+              Bên cạnh tuân thủ các quy trình làm việc để hạn chế những sai sót trong quá trình lập trình, bạn cũng cần thực hiện các bước kiểm tra và đánh giá, cụ thể:
+            </p>
+            <ul>
+              <li>Xác định các đường dẫn mã code tuy có thể khác nhau nhưng khi thay đổi bạn vẫn có thể thực hiện được</li>
+              <li>iểm tra (test) từng đường dẫn một có đang chính xác chưa</li>
+              <li>Chú ý đến các mẫu dễ bị lỗ</li>
+              <li>Tìm kiếm những nơi đơn giản hoá mã và làm cho các quy trình này rõ ràng hơn</li>
+            </ul>
+            <h3>
+              7 Học hỏi từ những sai lầm
+            </h3>
+            <p>
+              Khi mắc sai lầm việc đầu tiên là hãy sửa lỗi (bug). Học lập trình C cho người chưa biết gì bao giờ bạn cũng sẽ gặp phải lỗi là điều rất hiển nhiên. Vì vậy, để sửa được lỗi bạn có thể:
+              <ul>
+                <li>Đưa người đánh giá của bạn xem xét</li>
+                <li>Kiểm tra lại quá trình viết và xem xét triển khai lại mã đã viết để tìm ra được nguyên nhân gốc rễ.</li><br>
+            </ul>
+            </p>
+            <p>
+              Từ đó, bạn sẽ giải quyết được lỗi của mình một cách chính xác và rút được bài học kinh nghiệm cho các lập trình mã về sau.
+            </p>
+          <h2>
+            Tự học lập trình C cho người mới bắt đầu
+          </h2>
+          <p>
+            Để quá trình tự học lập trình C cho người chưa biết gì đạt được hiệu quả hơn. Trước hết bạn phải hiểu và nắm được những kiến thức căn bản về các khái niệm từ khoá liên quan đến C. Từ đó, bạn mới có thể dễ dàng bắt tay vào viết mã.
+          </p>
+          <h2>
+            Tài liệu học lập trình C cơ bản cho người mới bắt đầu
+          </h2>
+          <p>
+            Để cho việc tự học của bạn có thể được tốt hơn, chúng tôi đã tìm hiểu và sẽ liệt kê một số tài liệu, giáo trình bổ ích có thể hỗ trợ bạn, mời bạn tham khảo
+          </p>
+          <ul>
+            <li>Kỹ thuật lập trình C – Phạm Văn Ất</li>
+          </ul>
+          <p>
+            Sách của thầy Phạm Văn Ất cung cấp đầy đủ kiến thức cơ bản đến nâng cao, gồm 546 trang, 18 chương và 13 phụ lục
+          </p>
+          <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/cc5b6d7a-064f-467e-a635-f2296bd5b66e.image.png?v=1695880722988"/>
+          <ul>
+            <li>Giáo trình C – Aptech<br>
+Tài liệu cũng cung cấp đầy đủ các kiến thức lập trình cơ bản, có nhiều ví dụ hay và nguồn code bạn có thể tham khảo</li>
+            <li>Giáo trình C – ĐHQG Hà Nội<br>
+Tài liệu này cũng có đầy đủ những kiến thức dành cho các bạn mới học và làm quen với ngôn ngữ lập trình C</li>
+            <li>Giáo trình Ngôn ngữ lập trình C – Tiêu Kim Cương<br>
+Tài liệu tóm lược nhưng đủ thông tin về ngôn ngữ lập trình C trong 7 chương</li>
+            <li>Sách Head First C (tiếng Anh)<br>
+Được đánh giá là “cuốn sách đáng đọc”, nhờ cách truyền đạt thú vị, sử dụng nhiều hình ảnh giúp người đọc dễ hình dung và tạo được hứng thú.</li>
+          
+          <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/cedb2f98-372c-499c-9c49-81c627745fda.image.png?v=1695886577372"/>
+            <li>Ebook C Noted for Professional (tiếng Anh)<br>
+Tài liệu được viết dựa trên tài liệu lập trình của diễn đàn lập trình hàng đầu StackOverflow. Tổng hợp đầy đủ các kiến thức bởi các chuyên gia
+<br>
+Ngoài tài liệu tham khảo, bạn có thể trực tiếp tham dự các khoá học để có thể được hướng dẫn cụ thể hơn bởi một đội ngũ chuyên nghiệp.</li>
+            </ul>
+          <h2>
+            Kết luận
+          </h2>
+          <p>
+            Ngôn ngữ C được phát triển bởi nhà khoa học máy tính Dennis Ritchie vào năm 1972. Các đặc tính chủ yếu của nó bao gồm: ngôn ngữ mẹ, ngôn ngữ lập trình hệ thống, ngôn ngữ thủ tục, ngôn ngữ lập trình có cấu trúc và ngôn ngữ cấp trung.<br><br>
+
+Nó được ứng dụng rộng rãi trong lĩnh vực phát triển phần mềm. Bên cạnh đó, nó còn có tính khả chuyển cao và linh hoạt.
+<br><br>
+Trên đây là những kiến thức cơ bản về khái niệm, những ứng dụng chính, cách thức hoạt động và ưu nhược điểm của ngôn ngữ lập trình C.
+<br><br>
+Để việc học lập trình C cho người mới bắt đầu ngoài việc ghi nhớ các nguyên tắc, bạn còn phải nắm được những kiến thức căn bản thì việc tự học của bạn sẽ trở nên dễ dàng hơn.
+          </p>
+        </div>
+
+        <aside class="sidebar">
+          <div class="lich">
+            <div id="days"></div>
+            <div id="dates"></div>
+            <div id="times"></div>
+      </div>
+      
+      <style>
+      .lich{
+      padding:20px;
+      background:#f1f1f1;
+      border-radius:10px;
+      font-size:30px;
+      border:2px solid #999;
+      }
+      </style>
+      
+      <script>
+      window.onload = setInterval(clock,1000);
+      function clock()
+      {
+      var d = new Date();
+      var date = d.getDate();
+      var month = d.getMonth();
+      var montharr =["Tháng 1","Tháng 2","tháng 3","Tháng 4","Tháng 5","Tháng 6","Tháng 7","Tháng 8","Tháng 9","Tháng 10","tháng 11","Tháng 12"];
+      month=montharr[month];
+      var year = d.getFullYear();
+      var day = d.getDay();
+      var dayarr =["Chủ Nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"];
+      day=dayarr[day];
+      var hour =d.getHours();
+      var min = d.getMinutes();
+      var sec = d.getSeconds();
+      document.getElementById("days").innerHTML=day;
+      document.getElementById("dates").innerHTML=date+" "+month+" "+year;
+      document.getElementById("times").innerHTML=hour+":"+min+":"+sec;
+      }
+      </script>
+              <h3>Bài viết liên quan</h3>
+              <div>
+                <h4>
+                  <a href="thietkegiaodienwebsite.html">Thiết kế giao diện website</a></h4>
+                </div>
+              <div>
+                  <img
+                    align="left"
+                    height="300"
+                    src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/40e030a4-cdc0-4d7f-980f-9f447a6f6382.image.png?v=1695750582571"
+                    style="margin-left: auto; margin-right: auto"
+                    width="350"
+                  />&emsp;Một website được cho là chất lượng cần phải có phần giao diện web đẹp mắt và thu hút, đặc biệt thúc đẩy được hành vi tương tác của người dùng trong quá trình truy cập. Bởi trang web chính là phương thức để đưa thương hiệu
+                  gần hơn với khách hàng.
+                <hr />
+              </div>
+              <div>
+                <h4>
+                  <a href="laptrinhjava.html">Lập trình ngôn ngữ Java</a></h4>
+                <img
+                    align="left"
+                    height="300"
+                    src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/faf030d7-e9a1-4d4a-a807-3dc37f95fdaa.image.png?v=1695699559053"
+                    style="margin-left: auto; margin-right: auto"
+                    width="350"
+                  />&emsp;Vì sao Java lại trở thành một lựa chọn phổ biến của các
+                  nhà phát triển phần mềm hiện đại?<br />&emsp;Ngôn ngữ lập trình
+                  Java có công dụng gì?<br />&emsp;Java hoạt động như thế nào...?
+              </div>
+              <hr>
+              <h4>
+                  <a href="laptrinhc.html">Lập trình ngôn ngữ C</a></h4>
+              <div>
+              <img
+                    align="left"
+                    height="300"
+                    src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/92a1e23c-ed3c-4160-8824-ddb972e70583.image.png?v=1695877504431"
+                    style="margin-left: auto; margin-right: auto"
+                    width="350"
+                  />&emsp;Ngôn ngữ C là ngôn ngữ lập trình có mục đích và được sử dụng khá phổ biến nhờ tính đơn giản và linh hoạt. Nó cũng là một ngôn ngữ lập trình có cấu trúc và độc lập với máy.
+    
+    Được sử dụng để viết các ứng dụng quan trọng khác nhau. Chẳng hạn như các hệ điều hành, cơ sở dữ liệu Oracle và trình thông dịch Python,….
+    
+    Hãy cùng Nhật Bảo tìm hiểu các vấn đề liên quan đến học lập trình C cho người mới bắt đầu nhé!
+                <hr />
+              </div>
+              <div>
+                <h4>
+                  <a href="laptrinhphp.html">Lập trình PHP</a></h4>
+                <img
+                    align="left"
+                    height="300"
+                    src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/59875625-b5d4-4588-a7ad-0cce84a56753.image.png?v=1696316880841"
+                    style="margin-left: auto; margin-right: auto"
+                    width="350"
+                  />&emsp;Nếu là một dân công nghệ, chẳng hẳn bạn đã nghe qua khá nhiều về các ngôn ngữ Java, C#, C++,… Mỗi ngôn ngữ lập trình sẽ có những đặc điểm riêng, và PHP được xem như một ngôn ngữ lập trình rất phổ biến với dân IT. Hãy cùng tìm hiểu PHP là gì để hiểu rõ hơn về ngôn ngữ này cũng như cách để bạn có thể thành thạo nó nhé!
+              <hr>
+                </div>
+                <div>
+                    <h4>
+                      <a href="laptrinhpython.html">Lập trình ngôn ngữ Python</a></h4>
+                    <img
+                        align="left"
+                        height="300"
+                        src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/e2bdf7fb-7ac1-4e2b-8635-32c0ddaf8b0a.image.png?v=1696329284911"
+                        style="margin-left: auto; margin-right: auto"
+                        width="350"
+                      />&emsp;Python là một ngôn ngữ lập trình được sử dụng rộng rãi trong các ứng dụng web, phát triển phần mềm, khoa học dữ liệu và máy học (ML). Các nhà phát triển sử dụng Python vì nó hiệu quả, dễ học và có thể chạy trên nhiều nền tảng khác nhau. Phần mềm Python được tải xuống miễn phí, tích hợp tốt với tất cả các loại hệ thống và tăng tốc độ phát triển.
+                  <hr>
+                    </div>
+                    <div>
+                        <h4>
+                          <a href="github.html">Làm việc trên Github</a></h4>
+                        <img
+                            align="left"
+                            height="300"
+                            src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/fbb18b1a-4034-43de-bb67-53c7fd4b1533.image.png?v=1696329809658"
+                            style="margin-left: auto; margin-right: auto"
+                            width="350"
+                          />&emsp;GitHub là một dịch vụ cung cấp kho lưu trữ mã nguồn Git dựa trên nền web cho các dự án phát triển phần mềm. GitHub cung cấp cả phiên bản trả tiền lẫn miễn phí cho các tài khoản. Các dự án mã nguồn mở sẽ được cung cấp kho lưu trữ miễn phí. 
+                      <hr>
+                        </div>
+                        <div>
+                            <h4>
+                              <a href="laptrinhgame.html">Sự phát triển của ngành công nghiệp trò chơi điện tử</a></h4>
+                            <img
+                                align="left"
+                                height="300"
+                                src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/d78f5135-72e8-4b7e-94fc-1a5bb4736a44.image.png?v=1696330450063"
+                                style="margin-left: auto; margin-right: auto"
+                                width="350"
+                              />&emsp;Nghề lập trình game vài năm nay đang nổi lên “rần rần”, thu hút sự quan tâm của giới trẻ và trở thành sự lựa chọn của nhiều bạn ngay từ khi còn ngồi trên ghế nhà trường. Và nghề này cũng đang được nhận định sẽ là xu hướng của tương lai.
+                            </div>
+      </div>
+        </aside>
+      <footer>
+        <p>&copy; Copyright © 2023 Nguyễn Huỳnh Nhật Bảo - https://github.com/NguyenHuynhNhatBaocntt. All Rights Reserved.
+Design by Nhat Bao - Windows Phone - Windows 8 - App Store - HTML5 + CSS3</p>
+      </footer>
+    </div>
+  </body>
+</html>

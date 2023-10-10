@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Thiết kế giao diện website</title>
+    <link rel="stylesheet" href="screen.css" />
+    <link rel="stylesheet" href="hinhanh.css" />
+    <link rel="stylesheet" href="trinhchieu.css" />
+    <link rel="stylesheet" href="hinhanh1.css" />
+    <base href="index.html" />
+    <style>
+      #snowflakeContainer{position:absolute;left:0px;top:0px;}
+      .snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+      .snowflake:hover {cursor:default}
+    </style>
+    <div id='snowflakeContainer'>
+    <p class='snowflake'>❄</p>
+    </div>
+    <script style='text/javascript'>
+      //<![CDATA[
+      var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+      //]]>
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="search">
+        <form>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input
+            type="text"
+            class="search-border"
+            placeholder="Tìm kiếm ..."
+            value=""
+            name="s"
+          /><a href="/en/" />
+          <button class="button">
+            <i class="fa fa-search" style="color: white"
+              ><img
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/6bc7ec86-df44-48f9-83b6-13637163b322.image.png?v=1695364727805"
+                alt=""
+                width="10"
+                height="50"
+                srcset="" /><a></a
+            ></i>
+          </button>
+          <a href="/en/"
+            ><img
+              src="https://imgur.com/HQZJODF.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+          <a href="/"
+            ><img
+              src="https://imgur.com/ddgBAVL.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+        </form>
+      </div>
+    </header>
+    <div class="container">
+      <header>
+        <h2>Nguyen Huynh Nhat Bao's Hello World Page.</h2>
+        <a href="index.html" class="logo"
+          ><img
+            src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/cd8fd9c8-ab50-484a-9b5d-5669dc588f3e.image.png?v=1695866222769"
+            alt=""
+            width="200"
+            height="1000000"
+            srcset=""
+        /></a>
+      </header>
+      <header>
+      <nav class="site-nav">
+        <ul class="group">
+          <li><a href="./index.html">Trang chủ</a></li>
+          <li><a href="job.html">Công Việc</a></li>
+          <li><a href="news.html">Tin tức công nghệ</a></li>
+          <li><a href="ContactUs.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+      </header>
+        <div class="content-area group">
+          <div class="main-area">
+            <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/750a1374-1f41-423c-99fc-a5d439f244a5.image.png?v=1695874733498" height="300" width="400"/>
+            <h2>
+              Giao diện web là gì?
+            </h2>
+            <p>
+              Giao diện web là thuật ngữ ám chỉ một cấu trúc được thiết kế và xuất hiện trong hầu hết các website, đồng thời cho phép người dùng truy cập và tương tác với trang trong quá trình sử dụng.
+
+Giao diện web bao gồm một tập hợp các yếu tố trực quan (như phần hình ảnh, video và văn bản), tương tác (gồm nút, hộp cuộn, hộp kiểm, điều khiển) cùng một số thiết kế thể hiện thông tinvaf hành động sẵn có.
+
+Nhiệm vj chính của giao diện diện web, chính là cung cấp môi trường trực quan và đơn giản, hỗ trợ việc giao tiếp thuận lợi cùng hệ điều hành của máy tính hay các thiết bị di động.
+
+Tuy giao diện web không hẳn là nội dung, nhưng nó lại có khả năng truyền tải thông điệp khá tốt và ảnh hưởng trực tiếp đến cảm xúc của người dùng trong quá trình truy cập.
+
+Một website sở hữu phần giao diện web đẹp và phù hợp, chắc chắn sẽ được đánh giá cao và tạo được giá trị tốt đối với mỗi người dùng.
+            </p>
+            <p>
+              <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/750a1374-1f41-423c-99fc-a5d439f244a5.image.png?v=1695874733498" height="300" width="400"/>
+              <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/9ba398d2-bf09-4934-bfb1-a6f25849f219.image.png?v=1695875001822" height="300" width="400"/>
+            </p>
+            <h2>
+              Thành phần cần thiết trong giao diện web
+            </h2>
+            <p>
+              Trong giao diện web bắt buộc phải chứa những yếu tố sau:
+            </p>
+            <ul>
+              <li>Hình ảnh: Chịu trách nhiệm truyền tải những nội dụng và thông điệp đến người dùng, ngay khi họ vừa truy cập vào website.</li>
+              <li>Màu sắc: Xuất hiện xuyên trong tổng quan của website, từ trang chủ đến các trang con tạo được sự chuyên nghiệp và hài hòa cho trang.</li>
+              <li>Kỹ xảo: Có thể là những hành động trượt, quăng... nhằm mục đích tạo điểm nổi bật cho thông điệp cần truyền tải.</li>
+              <li>Phần bố cục nội dung: Mang lại sự thuận tiện cho người dùng khi cần tìm kiếm một nội dung nào đó trong website.</li>
+            </ul>
+            <p>
+              
+           
+            <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/e5f7be59-e0a3-4523-9bb6-3e3d3f96eb18.image.png?v=1695875237357"/>
+               </p>
+<h2>
+  Những tiêu chí đánh giá giao diện web đẹp mắt
+          </h2>
+          <p>
+          <ul>
+            <li>Menu điều hướng, cửa sổ, nội dung đồ họa, con trỏ, âm thanh... cần phải được thiết kế với bố cục rõ ràng, sắp xếp hợp lý và đồng thời khiến người dùng có thể thực hiện việc tương tác dễ dàng khi cần.</li>
+            <li>Các yếu tố trong giao diện web trong của website nên được thiết kế đảm bảo tính thống nhất và nhất quán, thể hiện sự chuyên nghiệp cho cả đơn vị thực hiện lẫn sở hữu.</li>
+            <li>Đăng tải các hình ảnh rõ nét, không bị nhòe, vỡ hình, đặc biệt là hình ảnh sản phẩm nên có kích thước chuẩn và phù hợp.</li>
+            <li>Nên chọn font chữ nào dễ đọc, đơn giản, phù hợp với số đông khách hàng, kích thước font chữ vừa đủ to cho dễ đọc, nhằm đảm bảo tính đồng nhất chỉ chọn một kiểu và kích thước font chữ cho tổng thể website.</li>
+            <li>Giao diện web phải được thiết kế với màu sắc trang nhã, đặc biệt là phải liên quan đến bộ nhận diện thương hiệu của doanh nghiệp.</li>
+            <li>Khoảng cách giữa các chữ không quá sát nhau sẽ gây cảm giác bức bối và khó đọc. Kết hợp khoảng cách, khoảng trắng giữa các chữ phù hợp sẽ giúp thiết kế giao diện website nhìn sang trọng, dễ đọc. Việc này sẽ mang lại sự thuận tiện cho người dùng trong quá trình điều hướng nội dung.</li>
+            <li>Giao diện web hoạt động tương thích trên các thiết bị Mobile và đảm bảo chuẩn SEO.</li>
+          </ul>
+            </p>
+          <p>
+            <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/f2296793-790c-4d9d-8e3f-47ed279fb6d5.image.png?v=1695875763678"/>
+          </p>
+          <h2>
+            Các kiểu thiết kế giao diện web
+          </h2>
+          <p>
+            Với mong muốn mang đến đa dạng sự lựa chọn cho khách hàng trên thị trường, hiện nay giao diện web thường được thiết kế với ba loại chính:
+          </p>
+          <ul>
+            <li>Modify from Template - Thiết kế theo template: Khi sử dụng mẫu thiết kế giao diện web này, người thực hiện sẽ tiết kiệm được khá nhiều chi phí, cũng như thời gian và công sức chờ đợi, bởi các yếu tố cần thiết đã được nghiên cứu tỉ mỉ và thực hiện sẵn sao cho hợp lý nhất.</li>
+            <li>Tự thiết kế theo yêu cầu của cá nhân hay tổ chức: Việc chọn cách thiết kế này sẽ mang đến cho bạn một giao diện web độc đáo, khác biệt hoàn toàn so với đối thủ. Bởi chúng sẽ được sắp xếp và bố trí theo đúng với những gì mà bạn mong muốn, đồng thời tối ưu các yếu tố khiến nó trở nên chuẩn SEO hơn.</li>
+            <li>Average design - Kết hợp cả hai phương pháp thiết kế trên: Ở phương pháp này, bạn hoàn toàn có thể lựa chọn linh hoạt giữa các yếu tố có sẵn, kết hợp cùng một số yếu tố theo sở thích của mình, để có thể sở hữu cho mình một thiết kế giao diện web độc đáo và cuốn hút nhất.</li>
+            
+          </ul>
+          <p>
+            <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/52cc6b2e-97f5-4bbe-be89-c695ec682ae0.image.png?v=1695876044586"/>
+          </p>
+          <p>
+            Nếu bạn cũng đang có nhu cầu sở hữu cho mình một website với phần giao diện web độc đáo, thì có thể liên hệ ngay cho Thiết Kế Web Số thông qua hotline <a href="tel:+84776154777" target="_blank">077 6154 777</a> để được hỗ trợ tư vấn tận tình và thỏa thuận phương án thiết kế phù hợp nhé!
+          </p>
+          </div>
+        <aside class="sidebar">
+          <div class="lich">
+            <div id="days"></div>
+            <div id="dates"></div>
+            <div id="times"></div>
+      </div>
+      
+      <style>
+      .lich{
+      padding:20px;
+      background:#f1f1f1;
+      border-radius:10px;
+      font-size:30px;
+      border:2px solid #999;
+      }
+      </style>
+      
+      <script>
+      window.onload = setInterval(clock,1000);
+      function clock()
+      {
+      var d = new Date();
+      var date = d.getDate();
+      var month = d.getMonth();
+      var montharr =["Tháng 1","Tháng 2","tháng 3","Tháng 4","Tháng 5","Tháng 6","Tháng 7","Tháng 8","Tháng 9","Tháng 10","tháng 11","Tháng 12"];
+      month=montharr[month];
+      var year = d.getFullYear();
+      var day = d.getDay();
+      var dayarr =["Chủ Nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"];
+      day=dayarr[day];
+      var hour =d.getHours();
+      var min = d.getMinutes();
+      var sec = d.getSeconds();
+      document.getElementById("days").innerHTML=day;
+      document.getElementById("dates").innerHTML=date+" "+month+" "+year;
+      document.getElementById("times").innerHTML=hour+":"+min+":"+sec;
+      }
+      </script>
+          <h3>Bài Viết Liên Quan</h3>
+          <div>
+            <h4>
+              <a href="thietkegiaodienwebsite.html">Thiết kế giao diện website</a></h4>
+            </div>
+          <div>
+              <img
+                align="left"
+                height="300"
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/40e030a4-cdc0-4d7f-980f-9f447a6f6382.image.png?v=1695750582571"
+                style="margin-left: auto; margin-right: auto"
+                width="350"
+              />&emsp;Một website được cho là chất lượng cần phải có phần giao diện web đẹp mắt và thu hút, đặc biệt thúc đẩy được hành vi tương tác của người dùng trong quá trình truy cập. Bởi trang web chính là phương thức để đưa thương hiệu
+              gần hơn với khách hàng.
+            <hr />
+          </div>
+          <div>
+            <h4>
+              <a href="laptrinhjava.html">Lập trình ngôn ngữ Java</a></h4>
+            <img
+                align="left"
+                height="300"
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/faf030d7-e9a1-4d4a-a807-3dc37f95fdaa.image.png?v=1695699559053"
+                style="margin-left: auto; margin-right: auto"
+                width="350"
+              />&emsp;Vì sao Java lại trở thành một lựa chọn phổ biến của các
+              nhà phát triển phần mềm hiện đại?<br />&emsp;Ngôn ngữ lập trình
+              Java có công dụng gì?<br />&emsp;Java hoạt động như thế nào...?
+          </div>
+          <hr>
+          <h4>
+              <a href="laptrinhc.html">Lập trình ngôn ngữ C</a></h4>
+          <div>
+          <img
+                align="left"
+                height="300"
+                src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/92a1e23c-ed3c-4160-8824-ddb972e70583.image.png?v=1695877504431"
+                style="margin-left: auto; margin-right: auto"
+                width="350"
+              />&emsp;Ngôn ngữ C là ngôn ngữ lập trình có mục đích và được sử dụng khá phổ biến nhờ tính đơn giản và linh hoạt. Nó cũng là một ngôn ngữ lập trình có cấu trúc và độc lập với máy.
+
+Được sử dụng để viết các ứng dụng quan trọng khác nhau. Chẳng hạn như các hệ điều hành, cơ sở dữ liệu Oracle và trình thông dịch Python,….
+
+Hãy cùng Nhật Bảo tìm hiểu các vấn đề liên quan đến học lập trình C cho người mới bắt đầu nhé!
+            <hr />
+          </div>
+          <div>
+            <h4>
+              <a href="laptrinhphp.html">Lập trình PHP</a></h4>
+            <img
+                align="left"
+                height="300"
+                src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/59875625-b5d4-4588-a7ad-0cce84a56753.image.png?v=1696316880841"
+                style="margin-left: auto; margin-right: auto"
+                width="350"
+              />&emsp;Nếu là một dân công nghệ, chẳng hẳn bạn đã nghe qua khá nhiều về các ngôn ngữ Java, C#, C++,… Mỗi ngôn ngữ lập trình sẽ có những đặc điểm riêng, và PHP được xem như một ngôn ngữ lập trình rất phổ biến với dân IT. Hãy cùng tìm hiểu PHP là gì để hiểu rõ hơn về ngôn ngữ này cũng như cách để bạn có thể thành thạo nó nhé!
+          <hr>
+            </div>
+            <div>
+                <h4>
+                  <a href="laptrinhpython.html">Lập trình ngôn ngữ Python</a></h4>
+                <img
+                    align="left"
+                    height="300"
+                    src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/e2bdf7fb-7ac1-4e2b-8635-32c0ddaf8b0a.image.png?v=1696329284911"
+                    style="margin-left: auto; margin-right: auto"
+                    width="350"
+                  />&emsp;Python là một ngôn ngữ lập trình được sử dụng rộng rãi trong các ứng dụng web, phát triển phần mềm, khoa học dữ liệu và máy học (ML). Các nhà phát triển sử dụng Python vì nó hiệu quả, dễ học và có thể chạy trên nhiều nền tảng khác nhau. Phần mềm Python được tải xuống miễn phí, tích hợp tốt với tất cả các loại hệ thống và tăng tốc độ phát triển.
+              <hr>
+                </div>
+                <div>
+                    <h4>
+                      <a href="github.html">Làm việc trên Github</a></h4>
+                    <img
+                        align="left"
+                        height="300"
+                        src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/fbb18b1a-4034-43de-bb67-53c7fd4b1533.image.png?v=1696329809658"
+                        style="margin-left: auto; margin-right: auto"
+                        width="350"
+                      />&emsp;GitHub là một dịch vụ cung cấp kho lưu trữ mã nguồn Git dựa trên nền web cho các dự án phát triển phần mềm. GitHub cung cấp cả phiên bản trả tiền lẫn miễn phí cho các tài khoản. Các dự án mã nguồn mở sẽ được cung cấp kho lưu trữ miễn phí. 
+                  <hr>
+                    </div>
+                    <div>
+                        <h4>
+                          <a href="laptrinhgame.html">Sự phát triển của ngành công nghiệp trò chơi điện tử</a></h4>
+                        <img
+                            align="left"
+                            height="300"
+                            src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/d78f5135-72e8-4b7e-94fc-1a5bb4736a44.image.png?v=1696330450063"
+                            style="margin-left: auto; margin-right: auto"
+                            width="350"
+                          />&emsp;Nghề lập trình game vài năm nay đang nổi lên “rần rần”, thu hút sự quan tâm của giới trẻ và trở thành sự lựa chọn của nhiều bạn ngay từ khi còn ngồi trên ghế nhà trường. Và nghề này cũng đang được nhận định sẽ là xu hướng của tương lai.
+                        </div>
+                    
+        </aside>
+      </div>
+      <footer>
+        <p>&copy; Copyright © 2023 Nguyễn Huỳnh Nhật Bảo - https://github.com/NguyenHuynhNhatBaocntt. All Rights Reserved.
+Design by Nhat Bao - Windows Phone - Windows 8 - App Store - HTML5 + CSS3</p>
+      </footer>
+    </div>
+  </body>
+</html>

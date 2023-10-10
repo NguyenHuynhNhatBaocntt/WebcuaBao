@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Apple ra mắt iPhone 15 series, giá cao nhất 46,99 triệu đồng cho bản Pro Max 1TB</title>
+    <link rel="stylesheet" href="screen.css" />
+    <link rel="stylesheet" href="hinhanh.css" />
+    <link rel="stylesheet" href="trinhchieu.css" />
+    <link rel="stylesheet" href="hinhanh1.css" />
+    <base href="index.html" />
+    <style>
+      #snowflakeContainer{position:absolute;left:0px;top:0px;}
+      .snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+      .snowflake:hover {cursor:default}
+    </style>
+    <div id='snowflakeContainer'>
+    <p class='snowflake'>❄</p>
+    </div>
+    <script style='text/javascript'>
+      //<![CDATA[
+      var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+      //]]>
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="search">
+        <form>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input
+            type="text"
+            class="search-border"
+            placeholder="Tìm kiếm ..."
+            value=""
+            name="s"
+          /><a href="/en/" />
+          <button class="button">
+            <i class="fa fa-search" style="color: white"
+              ><img
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/6bc7ec86-df44-48f9-83b6-13637163b322.image.png?v=1695364727805"
+                alt=""
+                width="10"
+                height="50"
+                srcset="" /><a></a
+            ></i>
+          </button>
+          <a href="/en/"
+            ><img
+              src="https://imgur.com/HQZJODF.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+          <a href="/"
+            ><img
+              src="https://imgur.com/ddgBAVL.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+        </form>
+      </div>
+    </header>
+    <div class="container">
+      <header>
+        <h2>Nguyen Huynh Nhat Bao's Hello World Page.</h2>
+        <a href="index.html" class="logo"
+          ><img
+            src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/cd8fd9c8-ab50-484a-9b5d-5669dc588f3e.image.png?v=1695866222769"
+            alt=""
+            width="200"
+            height="1000000"
+            srcset=""
+        /></a>
+      </header>
+      <nav class="site-nav">
+        <ul class="group">
+          <li><a href="./index.html">Trang chủ</a></li>
+          <li><a href="job.html">Công Việc</a></li>
+          <li><a href="news.html">Tin tức công nghệ</a></li>
+          <li><a href="ContactUs.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+        <div class="content-area group">
+          <div class="main-area">
+            <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/579f5554-0bf1-4552-b032-2cee716fb543.image.png?v=1696321644632" height="200" width="1000"/>
+            <h1>
+                Apple ra mắt iPhone 15 series, giá cao nhất 46,99 triệu đồng cho bản Pro Max 1TB
+            </h1>
+            <h3>Rạng sáng 13/9, iPhone 15 series được ra mắt tại sự kiện Wonderlust và dự kiến sẽ được mở bán sớm tại Việt Nam từ 29/9 với giá từ 23 triệu đồng và cao nhất 47 triệu đồng…</h3>
+            <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/6ba88aa3-d7d3-45fb-94e4-71bd0ed54dce.image.png?v=1696321887458" height="300" width="1000"/>
+            <p>iPhone 15 series gồm 4 sản phẩm iPhone 15, iPhone 15 Plus, iPhone 15 Pro và iPhone 15 Pro Max. Dự kiến, bộ bốn sản phẩm này sẽ được bán tại Việt Nam từ 29/9 thay vì giữa tháng 10 như năm ngoái, cao nhất 46,99 triệu đồng. Mức giá trên được niêm yết trên cửa hàng trực tuyến Apple Store Online Việt Nam (https://www.apple.com/vn/iphone/) và một số đại lý ủy quyền ngay sau khi sản phẩm ra mắt vào sáng 13/9 tại Apple Park, California.
+<br><br>
+                Cụ thể, iPhone 15 có giá từ 22,99 triệu đến 31,99 triệu đồng, 15 Plus từ 25,99 triệu đến 34,99 triệu đồng tùy dung lượng bộ nhớ. Trong khi đó, 15 Pro được bán từ 28,99 triệu đến 43,99 triệu đồng, 15 Pro Max khởi điểm 34,99 triệu cho bản 256 GB và cao nhất 46,99 triệu đồng cho bộ nhớ một TB.
+                <br><br>
+                Ngoài ra, thời gian đặt hàng từ 22/9 và nhận máy vào 29/9. So với các năm trước, người dùng thường phải chờ khoảng 1-2 tháng trước khi có thể mua iPhone chính hãng.
+                <br><br>
+                Không có nhiều khác biệt so với tin đồn trước đó, cả bốn máy đều thay đổi ở cổng kết nối USB-C, camera độ phân giải tối đa 48 MP. iPhone 15 và 15 Plus có màn hình 6,1 và 6,7 inch, trang bị chip A16 Bionic, camera kép, màn hình Dynamic Island. Trong khi bản 15 Pro và 15 Pro Max nâng cấp ở chip A17 Pro, viền titan, nút Action thay vị trí của nút gạt chỉnh âm thanh. Cổng USB-C có khả năng truyền dữ liệu nhanh hơn, đạt tốc độ 10 Gbps, đồng bộ chuẩn sạc với các thiết bị iPad Macbook trong hệ sinh thái.
+                <br><br>
+                Theo thông tin từ FPT Shop và F.Studio by FPT, khách hàng có thể đăng ký sớm và từ ngày 22/9 có thể đặt mua sớm iPhone 15 series chính hãng. Điểm khác biệt năm nay chính là “Đặc quyền 12 tháng, 1 đổi 1”, đây là ưu đãi chỉ dành riêng cho chủ sở hữu iPhone mới. Cụ thể, trong suốt 12 tháng, nếu máy đang sử dụng bị lỗi từ nhà sản xuất, khách hàng sẽ lập tức được đổi ngay 01 máy mới, nguyên seal 100% có thời hạn bảo hành mới 12 tháng. Như vậy, khách hàng được dùng máy luôn mới thay vì phải dùng máy sửa chữa bảo hành, tăng thời hạn bảo hành, nhận và đổi máy tại nhà trong 24 vòng giờ.
+                <br><br>
+                FPT Shop và F.Studio đã lên kế hoạch nhập hàng, đảm bảo được nguồn hàng nhằm đáp ứng đầy đủ nhu cầu của khách hàng. Hệ thống dự đoán iPhone mới sẽ tiếp tục tạo nên "làn sóng mới", khuấy động thị trường công nghệ Việt trong mùa cuối năm. Hệ thống cũng kỳ vọng doanh số iPhone mới sẽ tăng trưởng 20% so với dòng sản phẩm iPhone 14 Series tiền nhiệm.
+                <br><br>
+                Ngoài FPT Shop và F.Studio, CellphoneS cũng sớm công bố giá bán iPhone 15, iPhone 15 Plus, iPhone 15 Pro, iPhone 15 Pro Max và chương trình khuyến mãi như thu cũ, trợ giá khi lên đời các sản phẩm Apple mới, ưu đãi thanh toán với đa dạng lựa chọn trả góp qua thẻ tín dụng,…
+                <br><br>
+                “2023 là năm khó khăn với nền kinh tế cũng như ngành bán lẻ công nghệ, thời điểm hiện tại cả thị trường ghi nhận sụt giảm mạnh về doanh số so với năm ngoái. Tuy nhiên, năm nay CellphoneS vẫn đặt mục tiêu cao cho tăng trưởng gần 3 con số cho loạt sản phẩm mới của hãng cho quý đầu mở bán”, đại diện CellphoneS nhận định.
+                
+                <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/db1575a0-409a-4eb6-8b0b-517b27edeb83.image.png?v=1696322130743" height="200" width="1000"/>
+                Các đại lý khác như CellphoneS, Hoàng Hà Mobile, Di Động Việt… cũng đã cho biết có thể sử dụng lợi thế về giá. Bảng giá dự kiến của đơn vị này thấp hơn khoảng 0,5-1,5 triệu đồng so với niêm yết của hãng.
+<br><br>
+Bên cạnh iPhone 15 series, Apple cũng ra mắt đồng hồ thông minh Apple Watch Series 9 và Apple Watch Ultra 2. Sự xuất hiện của Apple Watch ultra 2 sẽ tiếp tục thu hút thị trường smartwatch thể thao cao cấp. Khi Apple Watch ultra 2 có thêm tính năng thao tác không chạm, tập trung nâng cấp nhiều vào tính năng theo dõi sức khoẻ, tính thời trang và thời lượng sử dụng pin.
+            </p>
+<h3>
+    IPHONE 15 PRO MAX VẪN LÀ LỰA CHỌN HÀNG ĐẦU
+</h3>
+<p>Theo khảo sát tháng 7/2023 của CellphoneS với người dùng iPhone, iPhone 15 Pro Max vẫn là sản phẩm được đón nhận nhiều nhất, khả năng chiếm khoảng 2/3 lượng đặt cọc đợt đầu. 
+<br><br>
+    Ngoài ra, hai model dòng Pro không thay đổi nhiều về ngoại hình nhưng đi kèm những nâng cấp lớn về chất liệu vỏ cũng như cổng kết nối. Nút gạt bật tắt chế độ im lặng thay đổi sau nhiều năm bằng nút Action, trong khi cổng Lightning chuyển thành USB-C.
+    <br><br>
+    Bên cạnh đó, khung viền titanium trên dòng Pro mang đến sự chắc chắn mà trọng lượng nhẹ hơn. Chất liệu mới giúp hai máy chỉ nặng lần lượt 221 và 187 gram, đều nhẹ hơn phiên bản tiền nhiệm. Nổi bật là hệ thống camera zoom quang học 5x, mang đến trải nghiệm nhiếp ảnh di động cao cấp.
+    <br><br>
+    Tuy nhiên, thay đổi nhỏ trong thiết kế giúp model mới tạo cảm giác cầm thoải mái hơn đáng kể. Phần góc, viền nối giữa các cạnh bên và hai mặt trước sau được bo cong nhẹ giúp không bị cấn tay. Mặt sau vẫn bằng kính cường lực có độ nhám chống bám dính vân tay.
+    <br><br>
+    Màn hình 6,7 inch trên iPhone 15 Pro Max và được phủ lớp kính cường lực Ceramic Shield cao cấp. Viền xung quanh được làm mỏng và Apple cũng cho biết đây là mẫu iPhone có viền màn hình mỏng nhất của hãng. Các thông số khác gần như không thay so với iPhone 14 Pro Max như độ sáng tối đa 2.000 nit, tấm nền LTPO Super Retina XDR OLED tần số quét 120 Hz, Dynamic Island và tính năng màn hình luôn bật.
+    <br><br>
+    Cạnh bên với nút nguồn cùng chất liệu vỏ có độ nhám nhẹ. iPhone 15 Pro và 15 Pro Max trang bị tích hợp Apple A17 Pro, chip điện thoại đầu tiên sản xuất trên tiến trình 3 nm.
+    <br><br>
+    Tất cả dòng iPhone 15 đều có cổng USB-C mới nhưng tốc độ hỗ trợ khác nhau. Trên hai phiên bản Pro, người dùng có USB 3.0 với tốc độ nhanh hơn iPhone 15 (Apple không công bố nhưng nhiều khả năng là 2.0). Hãng cho biết có thể kết nối ổ cứng ngoài để ghi trực tiếp qua cổng USB-C khi quay chuẩn video 4K 60 hình/giây đòi hỏi nhiều bộ nhớ.
+    <br><br>
+    Thiết kế cụm camera gần như không thay đổi so với iPhone 14 Pro Max. Camera chính và camera góc siêu rộng giữ nguyên. Cảm biến chính 48 megapixel, f/1.8, tiêu cự 24 mm, kích cỡ điểm ảnh 1,22 micromet, lấy nét PDAF. Điểm khác biệt trên bản Pro và Pro Max, chỉ có iPhone 15 Pro Max trang bị camera zoom quang 5x trong khi bản 15 Pro vẫn là zoom quang 3x như cũ. Camera mới có tiêu cự 120 mm, độ phân giải 12 megapixel, f/2.8 cũng hỗ trợ chống rung cảm biến OIS.
+    <br><br>
+    Để phục vụ cho nút Action mới, Apple tạo thêm một menu cài đặt hoàn toàn mới với giao diện đồ họa bắt mắt hơn. Ngoài thay đổi chế độ nhạc chuông, im lặng, máy cho phép tùy biến thêm mở camera hay đèn pin, kích hoạt ứng dụng Ghi Âm, các chế độ Tập trung, Dịch thuật và các tính năng trợ năng như Kính lúp, hoặc dùng Phím tắt để có thêm tuỳ chọn.
+    <br><br>
+    Năm nay, dòng Plus tạo ra nét khác biệt khi cấu hình chip A16 Bionic khá tốt, camera 48MP cải thiện, thời lượng pin lâu tích hợp cổng sạc Type-C và màn hình lớn cùng cụm Dynamic Island. Do đó, iPhone 15 Plus cũng được kì vọng thị trường Việt Nam sẽ đón nhận nhiều hơn.</p>
+        </div>
+
+        <aside class="sidebar">
+          <div class="lich">
+            <div id="days"></div>
+            <div id="dates"></div>
+            <div id="times"></div>
+      </div>
+      
+      <style>
+      .lich{
+      padding:20px;
+      background:#f1f1f1;
+      border-radius:10px;
+      font-size:30px;
+      border:2px solid #999;
+      }
+      </style>
+      
+      <script>
+      window.onload = setInterval(clock,1000);
+      function clock()
+      {
+      var d = new Date();
+      var date = d.getDate();
+      var month = d.getMonth();
+      var montharr =["Tháng 1","Tháng 2","tháng 3","Tháng 4","Tháng 5","Tháng 6","Tháng 7","Tháng 8","Tháng 9","Tháng 10","tháng 11","Tháng 12"];
+      month=montharr[month];
+      var year = d.getFullYear();
+      var day = d.getDay();
+      var dayarr =["Chủ Nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"];
+      day=dayarr[day];
+      var hour =d.getHours();
+      var min = d.getMinutes();
+      var sec = d.getSeconds();
+      document.getElementById("days").innerHTML=day;
+      document.getElementById("dates").innerHTML=date+" "+month+" "+year;
+      document.getElementById("times").innerHTML=hour+":"+min+":"+sec;
+      }
+      </script>
+            <h3>Tin tức liên quan</h3>
+          <p>
+<a href="apple1.html"><img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/fa85345e-404e-4fc3-aa9c-e3f99298d74c.image.png?v=16963265225270"/>
+Apple đã tìm ra nguyên nhân gây quá nhiệt trên iOS 17, sẽ sớm tung bản vá khắc phục
+          </p>
+          <hr>
+          <p>
+            <a href="apple2.html"><img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/ffd662c7-09e9-460d-92eb-439d0e048086.image.png?v=1696326992821"/>
+                Phía sau quyết định chuyển sang USB-C từ iPhone 15 của Apple
+                      </p>
+        </aside>
+      </div>
+
+      <footer>
+        <p>&copy; Copyright © 2023 Nguyễn Huỳnh Nhật Bảo - https://github.com/NguyenHuynhNhatBaocntt. All Rights Reserved.
+Design by Nhat Bao - Windows Phone - Windows 8 - App Store - HTML5 + CSS3</p>
+      </footer>
+    </div>
+  </body>
+</html>

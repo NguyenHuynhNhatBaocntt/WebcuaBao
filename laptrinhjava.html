@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lập trình ngôn ngữ Java</title>
+    <link rel="stylesheet" href="screen.css" />
+    <link rel="stylesheet" href="hinhanh.css" />
+    <link rel="stylesheet" href="trinhchieu.css" />
+    <link rel="stylesheet" href="hinhanh1.css" />
+    <base href="index.html" />
+    <style>
+      #snowflakeContainer{position:absolute;left:0px;top:0px;}
+      .snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+      .snowflake:hover {cursor:default}
+    </style>
+    <div id='snowflakeContainer'>
+    <p class='snowflake'>❄</p>
+    </div>
+    <script style='text/javascript'>
+      //<![CDATA[
+      var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+      //]]>
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="search">
+        <form>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input
+            type="text"
+            class="search-border"
+            placeholder="Tìm kiếm ..."
+            value=""
+            name="s"
+          /><a href="/en/">
+          <button class="button">
+            <i class="fa fa-search" style="color: white"
+              ><img
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/6bc7ec86-df44-48f9-83b6-13637163b322.image.png?v=1695364727805"
+                alt=""
+                width="10"
+                height="50"
+                srcset="" /><a></a
+            ></i>
+          </button>
+          <a href="/en/"
+            ><img
+              src="https://imgur.com/HQZJODF.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+          <a href="/"
+            ><img
+              src="https://imgur.com/ddgBAVL.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+        </form>
+      </div>
+    </header>
+    <div class="container">
+      <header>
+        <h2>Nguyen Huynh Nhat Bao's Hello World Page.</h2>
+        <a href="index.html" class="logo"
+          ><img
+            src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/cd8fd9c8-ab50-484a-9b5d-5669dc588f3e.image.png?v=1695866222769"
+            alt=""
+            width="200"
+            height="1000000"
+            srcset=""
+        /></a>
+      </header>
+      <nav class="site-nav">
+        <ul class="group">
+          <li><a href="./index.html">Trang chủ</a></li>
+          <li><a href="job.html">Công Việc</a></li>
+          <li><a href="news.html">Tin tức công nghệ</a></li>
+          <li><a href="ContactUs.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+        <div class="content-area group">
+          <div class="main-area">
+            <img src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/splash_11%402x-lic.gif?v=1695840208051" height="300" width="400"/>
+            <h2>java là gì ?</h2>
+            <p>
+              <a
+                >Java là một ngôn ngữ lập trình được sử dụng rộng rãi để viết mã
+                cho các ứng dụng web. Ngôn ngữ này là lựa chọn phổ biến của các
+                nhà phát triển trong hơn 2 thập niên. Hiện nay có hàng triệu ứng
+                dụng Java đang được sử dụng. Java là một ngôn ngữ đa nền tảng,
+                hướng đến đối tượng, lấy mạng làm trung tâm và có thể được sử
+                dụng như một nền tảng. Đây là một ngôn ngữ lập trình nhanh, bảo
+                mật, đáng tin cậy dùng để viết mã cho mọi thứ từ ứng dụng di
+                động, phần mềm doanh nghiệp cho đến các ứng dụng dữ liệu lớn và
+                công nghệ phía máy chủ.
+              </a>
+            </p>
+            <h1>Ngôn ngữ lập trình Java có công dụng gì?</h1>
+
+            <h3>1. Phát triển trò chơi</h3>
+            <p>
+              Nhiều trò chơi điện tử, trò chơi máy tính và di động nổi tiếng
+              được phát triển bằng Java. Ngay cả những trò chơi hiện đại được
+              tích hợp công nghệ tiên tiến như máy học hay thực tế ảo cũng được
+              phát triển bằng công nghệ Java.
+            </p>
+            <h3>2. Điện toán đám mây</h3>
+            <p>
+              Java thường được gọi là ngôn ngữ WORA (Viết một lần, chạy ở mọi
+              nơi), khiến nó trở thành ngôn ngữ lý tưởng cho các ứng dụng phi
+              tập trung dựa trên đám mây. Các nhà cung cấp đám mây chọn ngôn ngữ
+              Java để chạy các chương trình trên nhiều nền tảng cơ sở khác nhau.
+            </p>
+            <h3>3. Dữ liệu lớn</h3>
+            <p>
+              Java được dùng cho các công cụ xử lý dữ liệu có thể làm việc với
+              những tập dữ liệu phức tạp và số lượng dữ liệu thời gian thực
+              khổng lồ.
+            </p>
+            <h3>4. Trí tuệ nhân tạo</h3>
+            <p>
+              Java là một trung tâm thư viện máy học đồ sộ. Sự ổn định và tốc độ
+              của ngôn ngữ này rất lý tưởng cho việc phát triển ứng dụng trí tuệ
+              nhân tạo như xử lý ngôn ngữ tự nhiên và học sâu.
+            </p>
+            <h3>5. Internet vạn vật</h3>
+            <p>
+              Java đã được sử dụng để lập trình các cảm biến và phần cứng trong
+              thiết bị biên có thể kết nối một cách độc lập với Internet.
+            </p>
+            <h2>
+              Vì sao Java lại trở thành một lựa chọn phổ biến của các nhà phát
+              triển phần mềm hiện đại?
+            </h2>
+            <p>
+              Java phổ biến vì nó được thiết kế để có thể dễ dàng sử dụng. Một
+              số lý do mà nhà phát triển tiếp tục chọn Java thay vì những ngôn
+              ngữ lập trình khác bao gồm:
+            </p>
+            <h3>Tài nguyên học tập chất lượng cao</h3>
+            <p>
+              Java đã ra mắt từ lâu nên các nhà phát triển mới có thể tiếp cận
+              rất nhiều tài nguyên học tập. Tài liệu chi tiết, những cuốn sách
+              toàn diện và các khóa học sẽ hỗ trợ nhà phát triển trong quá trình
+              học hỏi. Ngoài ra, người mới làm quen có thể bắt đầu viết mã bằng
+              Java Cơ bản trước khi chuyển sang Java Nâng cao.</p>
+              <h3>
+                Các chức năng và thư viện sẵn có
+            </h3>
+            <p>
+              Khi sử dụng Java, nhà phát triển không cần phải viết mọi chức năng mới từ đầu. Thay vào đó, Java cung cấp một hệ sinh thái phong phú gồm các chức năng và thư viện sẵn có để phát triển hàng loạt ứng dụng đa dạng. 
+              
+            </p>
+            <h3>
+              Sự hỗ trợ tích cực của cộng đồng
+            </h3>
+            <p>
+              Java có rất nhiều người dùng hoạt động và một cộng đồng có thể hỗ trợ nhà phát triển khi họ đối mặt với các thách thức trong việc viết mã. Phần mềm nền tảng Java cũng được duy trì và cập nhật thường xuyên.
+              
+            </p>
+            <h3>
+              Công cụ phát triển chất lượng cao
+            </h3>
+            <p>
+              Java cung cấp nhiều công cụ khác nhau để hỗ trợ chỉnh sửa tự động, gỡ lỗi, thử nghiệm, triển khai và quản lý thay đổi. Những công cụ này khiến việc lập trình bằng Java tiết kiệm thời gian và chi phí.
+            </p>
+            <h3>
+              Độc lập với nền tảng
+            </h3>
+            <p>
+              Mã Java có thể chạy trên bất kỳ nền tảng cơ sở nào như Windows, Linux, iOS hoặc Android mà không cần viết lại. Đây là điều khiến ngôn ngữ này trở nên đặc biệt mạnh mẽ trong môi trường hiện nay khi chúng ta muốn chạy ứng dụng trên nhiều thiết bị.
+            </p>
+            <h3>
+              Bảo mật
+            </h3>
+            <p>
+              Người dùng có thể tải mã Java không tin cậy từ trên mạng xuống và chạy mã này trong môi trường bảo mật để nó không thể gây hại. Mã không tin cậy sẽ không thể lây nhiễm vi-rút cho hệ thống máy chủ và cũng không thể đọc hoặc ghi tệp từ ổ cứng. Bạn cũng có thể cấu hình nhiều cấp độ và hạn chế bảo mật trong Java.
+            </p>
+            <h2>
+              Java hoạt động như thế nào?
+            </h2>
+            <p>
+              Mọi ngôn ngữ lập trình đều là phương thức để giao tiếp với máy. Phần cứng của máy chỉ phản hồi thông tin giao tiếp điện tử. Các ngôn ngữ lập trình cấp độ cao như Java đóng vai trò là cầu nối giữa ngôn ngữ con người và ngôn ngữ phần cứng. Để sử dụng Java, nhà phát triển cần phải hiểu được 2 điều:
+            </p>
+            <h3>
+              1. Ngôn ngữ và API Java
+            </h3>
+            <p>
+              Đây là hoạt động giao tiếp front-end giữa nhà phát triển và nền tảng Java.
+            </p>
+            <h3>
+              2. Máy ảo Java
+            
+            </h3>
+            <p>
+              Đây là hoạt động giao tiếp back-end giữa nền tảng Java và phần cứng cơ sở. Hãy cùng xem xét chi tiết từng yếu tố này ở bên dưới.
+            </p>
+            <h2>
+              API Java là gì ?
+            </h2>
+            <p>
+              Java xác định cú pháp và ngữ nghĩa của ngôn ngữ lập trình Java. Ngôn ngữ này bao gồm từ vựng và quy tắc cơ bản được sử dụng để viết thuật toán như kiểu dữ liệu nguyên thủy, khối if/else, vòng lặp, v.v.
+
+API là các thành phần phần mềm quan trọng đi kèm với Nền tảng Java. Đây là những chương trình Java viết sẵn có thể “cắm vào là chạy” chức năng hiện tại trong mã của riêng bạn. Ví dụ: Bạn có thể dùng API Java để nhận ngày giờ, thực hiện các phép toán hoặc điều chỉnh văn bản. 
+
+Mọi mã ứng dụng Java do nhà phát triển viết ra thường sẽ kết hợp cả mã mới và cũ từ API và thư viện Java.
+            </p>
+            <h2>
+              Máy ảo java là gì ?
+            </h2>
+            <p>
+              Máy ảo Java đóng vai trò là một lớp trừu tượng bổ sung giữa nền tảng Java và phần cứng máy cơ sở. Mã nguồn Java chỉ có thể chạy trên những máy cài đặt JVM. Câu trả lời cho câu hỏi vì sao lại cần đến Máy ảo Java nằm ở lịch sử lập trình.
+            </p>
+            <h2>
+              Lịch sử lập trình
+            </h2>
+            <p>
+              Khi những ngôn ngữ lập trình tự nhiên đầu tiên được phát triển, chúng được chia thành 2 loại chính tùy vào cách những ngôn ngữ này giao tiếp với phần cứng cơ sở.
+            </p>
+            <p>
+            <h4>1.Bộ biên dịch:</h4> Chương trình hoàn chỉnh được viết bằng cú pháp giống tiếng Anh tự nhiên bằng các bộ biên dịch, sau đó ngôn ngữ sẽ biên dịch (hoặc dịch) toàn bộ mã thành mã máy. Mã được biên dịch lúc này sẽ chạy trên phần cứng.
+            </p>
+           <p>
+            <h4>2.Bộ biên giải:</h4>Bộ diễn giải: Đối với các bộ diễn giải, tất cả các câu lệnh mã cấp cao được diễn giải thành mã máy khi phần cứng đang chạy.  Phần cứng sẽ chạy ngay những câu lệnh đã được viết trước khi xem xét câu lệnh tiếp theo.
+          </p>
+        <h2>
+          Môi trường thời gian chạy Java
+        </h2>
+        <p>
+          Chương trình Java là ngôn ngữ đầu tiên kết hợp cả hai phương pháp ở trên bằng một Máy ảo Java (JVM). Bộ biên dịch mã Java được gọi là Máy ảo Java. Trước tiên, mọi tệp Java đều được biên dịch thành bytecode. Bytecode Java chỉ có thể chạy trong JVM. JVM sau đó sẽ diễn giải bytecode để chạy bytecode trên nền tảng phần cứng cơ sở. Như vậy nếu ứng dụng đang chạy trên một máy Windows, JVM sẽ diễn giải ứng dụng đó cho Windows. Nhưng nếu ứng dụng chạy trên một nền tảng mã nguồn mở như Linux, JVM sẽ diễn giải nó cho Linux. 
+        </p>
+        <h2>
+          Cách lập trình java
+        </h2>
+        <p>
+          Để bắt đầu lập trình bằng Java, bạn cần phải cài đặt một Phiên bản Java trên hệ thống của mình. Có 4 phiên bản Java chính: 
+        </p>
+        <ol>
+          <li>Java phiên bản tiêu chuẩn (Java SE)</li>
+          <li>Java phiên bản doanh nghiệp (Java EE)</li>
+          <li>Java phiên bản vi mô (Java ME)</li>
+        </ol>
+        <h3>
+          Java SE là gì ?
+        </h3>
+        <p>
+          ava phiên bản tiêu chuẩn là nền tảng lập trình Java chính. Phiên bản này chứa toàn bộ thư viện và API mà mọi lập trình viên cần có để phát triển Java. Open Java Development Kit (OpenJDK) là phiên bản miễn phí, mã nguồn mở của Java SE.
+
+Amazon Corretto là bản phân phối OpenJDK ở trạng thái sẵn sàng sản xuất, đa nền tảng, miễn phí. Nó có thể được sử dụng như một bản thay thế tạm thời cho nhiều bản phân phối Java SE và được Amazon hỗ trợ miễn phí trong dài hạn. Bản phân phối này cho phép bạn chạy cùng một môi trường trong đám mây, tại chỗ hoặc trên máy cục bộ.
+        </p>
+        <h2>
+          SDK AWS dành cho Java là gì?
+        </h2>
+        <p>
+          SDK AWS dành cho Java giúp đơn giản hóa việc sử dụng các dịch vụ AWS bằng cách cung cấp một tập hợp thư viện đồng nhất và quen thuộc cho các nhà phát triển Java. AWS SDK cho Java cũng hỗ trợ mức trừu tượng cấp cao hơn cho quy trình phát triển đơn giản hóa. Các thư viện Java mã nguồn mở, tập trung vào AWS được cung cấp kèm theo ví dụ về mã và một hướng dẫn tham khảo API Java.
+
+Ví dụ về mã SDK chứa các ví dụ về mã Java và các trường hợp sử dụng trong thế giới thực đối với các dịch vụ AWS nhằm thúc đẩy quá trình phát triển ứng dụng của bạn. Ngoài ra, hướng dẫn tham khảo API Java mô tả các hoạt động của API cho phiên bản SDK AWS dành cho Java mới nhất. Hướng dẫn tham khảo này cũng cung cấp ví dụ về các yêu cầu, phản hồi và lỗi đối với các giao thức dịch vụ web được hỗ trợ.
+
+Bắt đầu sử dụng SDK AWS dành cho Java theo hướng dẫn dành cho nhà phát triển hoặc truy cập Trung tâm nhà phát triển AWS Java.
+        </p>
+        </div>
+
+        <aside class="sidebar">
+          <div class="lich">
+            <div id="days"></div>
+            <div id="dates"></div>
+            <div id="times"></div>
+      </div>
+      
+      <style>
+      .lich{
+      padding:20px;
+      background:#f1f1f1;
+      border-radius:10px;
+      font-size:30px;
+      border:2px solid #999;
+      }
+      </style>
+      
+      <script>
+      window.onload = setInterval(clock,1000);
+      function clock()
+      {
+      var d = new Date();
+      var date = d.getDate();
+      var month = d.getMonth();
+      var montharr =["Tháng 1","Tháng 2","tháng 3","Tháng 4","Tháng 5","Tháng 6","Tháng 7","Tháng 8","Tháng 9","Tháng 10","tháng 11","Tháng 12"];
+      month=montharr[month];
+      var year = d.getFullYear();
+      var day = d.getDay();
+      var dayarr =["Chủ Nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"];
+      day=dayarr[day];
+      var hour =d.getHours();
+      var min = d.getMinutes();
+      var sec = d.getSeconds();
+      document.getElementById("days").innerHTML=day;
+      document.getElementById("dates").innerHTML=date+" "+month+" "+year;
+      document.getElementById("times").innerHTML=hour+":"+min+":"+sec;
+      }
+      </script>
+          <h3>Bài Viết Liên Quan</h3>
+          <div>
+            <h4>
+              <a href="thietkegiaodienwebsite.html">Thiết kế giao diện website</a></h4>
+            </div>
+          <div>
+              <img
+                align="left"
+                height="300"
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/40e030a4-cdc0-4d7f-980f-9f447a6f6382.image.png?v=1695750582571"
+                style="margin-left: auto; margin-right: auto"
+                width="350"
+              />&emsp;Một website được cho là chất lượng cần phải có phần giao diện web đẹp mắt và thu hút, đặc biệt thúc đẩy được hành vi tương tác của người dùng trong quá trình truy cập. Bởi trang web chính là phương thức để đưa thương hiệu
+              gần hơn với khách hàng.
+            <hr />
+          </div>
+          <div>
+            <h4>
+              <a href="laptrinhjava.html">Lập trình ngôn ngữ Java</a></h4>
+            <img
+                align="left"
+                height="300"
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/faf030d7-e9a1-4d4a-a807-3dc37f95fdaa.image.png?v=1695699559053"
+                style="margin-left: auto; margin-right: auto"
+                width="350"
+              />&emsp;Vì sao Java lại trở thành một lựa chọn phổ biến của các
+              nhà phát triển phần mềm hiện đại?<br />&emsp;Ngôn ngữ lập trình
+              Java có công dụng gì?<br />&emsp;Java hoạt động như thế nào...?
+          </div>
+          <hr>
+          <h4>
+              <a href="laptrinhc.html">Lập trình ngôn ngữ C</a></h4>
+          <div>
+          <img
+                align="left"
+                height="300"
+                src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/92a1e23c-ed3c-4160-8824-ddb972e70583.image.png?v=1695877504431"
+                style="margin-left: auto; margin-right: auto"
+                width="350"
+              />&emsp;Ngôn ngữ C là ngôn ngữ lập trình có mục đích và được sử dụng khá phổ biến nhờ tính đơn giản và linh hoạt. Nó cũng là một ngôn ngữ lập trình có cấu trúc và độc lập với máy.
+
+Được sử dụng để viết các ứng dụng quan trọng khác nhau. Chẳng hạn như các hệ điều hành, cơ sở dữ liệu Oracle và trình thông dịch Python,….
+
+Hãy cùng Nhật Bảo tìm hiểu các vấn đề liên quan đến học lập trình C cho người mới bắt đầu nhé!
+            <hr />
+          </div>
+          <div>
+            <h4>
+              <a href="laptrinhphp.html">Lập trình PHP</a></h4>
+            <img
+                align="left"
+                height="300"
+                src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/59875625-b5d4-4588-a7ad-0cce84a56753.image.png?v=1696316880841"
+                style="margin-left: auto; margin-right: auto"
+                width="350"
+              />&emsp;Nếu là một dân công nghệ, chẳng hẳn bạn đã nghe qua khá nhiều về các ngôn ngữ Java, C#, C++,… Mỗi ngôn ngữ lập trình sẽ có những đặc điểm riêng, và PHP được xem như một ngôn ngữ lập trình rất phổ biến với dân IT. Hãy cùng tìm hiểu PHP là gì để hiểu rõ hơn về ngôn ngữ này cũng như cách để bạn có thể thành thạo nó nhé!
+          <hr>
+            </div>
+            <div>
+                <h4>
+                  <a href="laptrinhpython.html">Lập trình ngôn ngữ Python</a></h4>
+                <img
+                    align="left"
+                    height="300"
+                    src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/e2bdf7fb-7ac1-4e2b-8635-32c0ddaf8b0a.image.png?v=1696329284911"
+                    style="margin-left: auto; margin-right: auto"
+                    width="350"
+                  />&emsp;Python là một ngôn ngữ lập trình được sử dụng rộng rãi trong các ứng dụng web, phát triển phần mềm, khoa học dữ liệu và máy học (ML). Các nhà phát triển sử dụng Python vì nó hiệu quả, dễ học và có thể chạy trên nhiều nền tảng khác nhau. Phần mềm Python được tải xuống miễn phí, tích hợp tốt với tất cả các loại hệ thống và tăng tốc độ phát triển.
+              <hr>
+                </div>
+                <div>
+                    <h4>
+                      <a href="github.html">Làm việc trên Github</a></h4>
+                    <img
+                        align="left"
+                        height="300"
+                        src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/fbb18b1a-4034-43de-bb67-53c7fd4b1533.image.png?v=1696329809658"
+                        style="margin-left: auto; margin-right: auto"
+                        width="350"
+                      />&emsp;GitHub là một dịch vụ cung cấp kho lưu trữ mã nguồn Git dựa trên nền web cho các dự án phát triển phần mềm. GitHub cung cấp cả phiên bản trả tiền lẫn miễn phí cho các tài khoản. Các dự án mã nguồn mở sẽ được cung cấp kho lưu trữ miễn phí. 
+                  <hr>
+                    </div>
+                    <div>
+                        <h4>
+                          <a href="laptrinhgame.html">Sự phát triển của ngành công nghiệp trò chơi điện tử</a></h4>
+                        <img
+                            align="left"
+                            height="300"
+                            src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/d78f5135-72e8-4b7e-94fc-1a5bb4736a44.image.png?v=1696330450063"
+                            style="margin-left: auto; margin-right: auto"
+                            width="350"
+                          />&emsp;Nghề lập trình game vài năm nay đang nổi lên “rần rần”, thu hút sự quan tâm của giới trẻ và trở thành sự lựa chọn của nhiều bạn ngay từ khi còn ngồi trên ghế nhà trường. Và nghề này cũng đang được nhận định sẽ là xu hướng của tương lai.
+                        </div>
+                    
+        </aside>
+      </div>
+
+      <footer>
+        <p>&copy; Copyright © 2023 Nguyễn Huỳnh Nhật Bảo - https://github.com/NguyenHuynhNhatBaocntt. All Rights Reserved.
+Design by Nhat Bao - Windows Phone - Windows 8 - App Store - HTML5 + CSS3</p>
+      </footer>
+    </div>
+  </body>
+</html>
+

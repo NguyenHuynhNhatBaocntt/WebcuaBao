@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tìm hiểu về Github.</title>
+    <link rel="stylesheet" href="screen.css" />
+    <link rel="stylesheet" href="hinhanh.css" />
+    <link rel="stylesheet" href="trinhchieu.css" />
+    <link rel="stylesheet" href="hinhanh1.css" />
+    <base href="index.html" />
+    <style>
+        #snowflakeContainer{position:absolute;left:0px;top:0px;}
+        .snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+        .snowflake:hover {cursor:default}
+    </style>
+    <div id='snowflakeContainer'>
+    <p class='snowflake'>❄</p>
+    </div>
+    <script style='text/javascript'>
+        //<![CDATA[
+        var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+        //]]>
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="search">
+        <form>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input
+            type="text"
+            class="search-border"
+            placeholder="Tìm kiếm ..."
+            value=""
+            name="s"
+          /><a href="/en/" />
+          <button class="button">
+            <i class="fa fa-search" style="color: white"
+              ><img
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/6bc7ec86-df44-48f9-83b6-13637163b322.image.png?v=1695364727805"
+                alt=""
+                width="10"
+                height="50"
+                srcset="" /><a></a
+            ></i>
+          </button>
+          <a href="/en/"
+            ><img
+              src="https://imgur.com/HQZJODF.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+          <a href="/"
+            ><img
+              src="https://imgur.com/ddgBAVL.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+        </form>
+      </div>
+    </header>
+    <div class="container">
+      <header>
+        <h2>Nguyen Huynh Nhat Bao's Hello World Page.</h2>
+        <a href="index.html" class="logo"
+          ><img
+            src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/cd8fd9c8-ab50-484a-9b5d-5669dc588f3e.image.png?v=1695866222769"
+            alt=""
+            width="200"
+            height="1000000"
+            srcset=""
+        /></a>
+      </header>
+      <nav class="site-nav">
+        <ul class="group">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="job.html">Công Việc</a></li>
+          <li><a href="news.html">Tin tức công nghệ</a></li>
+          <li><a href="ContactUs.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+        <div class="content-area group">
+          <div class="main-area">
+            <h1>Tìm hiểu về Github</h1>
+            <h3>
+                Github là gì ?
+            </h3>
+            <p>Github là gì? Đây là một hệ thống quản lý dự án cũng như các phiên bản Code. Nền tảng này được ví như mạng xã hội dành riêng cho các lập trình viên. Tại đó, Coder được quyền clone lại mã nguồn từ một Repository.
+                </p>
+                <p> 
+                    <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/c1d00400-6f00-425f-be40-3bbdeaeeed1e.image.png?v=1696497919861"/>
+                    GitHub cũng đóng vai trò là một dịch vụ máy chủ Repository. Mục đích sử dụng để lưu trữ code, mỗi người có thể tạo tài khoản riêng và tạo ra kho chứa của mình. Nhờ thế, mỗi lần cần tái sử dụng, bạn nhanh chóng tìm thấy và vận dụng dễ dàng.
+<br><br>
+Khi tìm hiểu GitHub là gì, bạn sẽ thấy hệ thống này có đầy đủ tính năng của Git. Bên cạnh đó là các đặc điểm bổ sung về Social giúp các nhà phát triển tương tác với nhau một cách thuận lợi.
+<br><br>
+Người sử dụng có thể khai thác chức năng feeds, follower và network graph. Từ đó, mọi người học hỏi được kinh nghiệm từ lịch sử commit. Hiện nay, nền tảng này cung cấp hai hình thức là miễn phí và trả phí.
+<br><br>
+- Với phiên bản có phí, các doanh nghiệp công nghệ sử dụng để tăng khả năng quản lý đội nhóm. Đồng thời, Manager cũng phân quyền bảo mật dự án một cách dễ dàng khi hiểu GitHub là gì.
+<br><br>
+- Đối với phiên bản miễn phí, hầu hết người dùng đều sử dụng để lưu trữ source code.
+<br><br>
+Có thể thấy rằng GitHub là nơi tuyệt vời để bạn tham khảo những nguồn code chất lượng. Từ đó, quá trình hoàn thành dự án nhanh chóng, các phần được tối ưu hơn.
+                </p>
+            <h3>
+                Cách thức hoạt động trên GitHub diễn ra như thế nào?
+           </h3>
+            <p>Khi tìm hiểu GitHub là gì, bạn cần biết nhiều hơn những gì được chỉ ra từ khái niệm. Để nghiên cứu sâu, hãy nhìn vào cách thức hoạt động. Hệ thống được chia ra thành hai nền tảng làm việc chính là:
+            </p>
+            <p>
+                <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/99f13940-93a1-4ac7-8b2b-d753ac2dfdd0.image.png?v=1696498485022"/>
+            </p>
+            <ul>
+                <li>Local Workflow.</li>
+                <li>Server Workflow.</li>
+                <p>Đối với Local Workflow, bạn có thể thay đổi nguồn Code. Sau đó, quá trình mới đến bước xác nhận các biến đổi tại Server Workflow. Tuy nhiên, bạn cần lưu ý rằng bản xác nhận trên Server phải hoàn chỉnh.
+<br><br>
+                    Nếu điều kiện này chưa được đáp ứng có thể ảnh hưởng đến thành viên khách trong team. Điều này xảy đến khi tất cả sử dụng dữ liệu chung.
+                    <br><br>
+                    Nếu dùng khi lưu trữ của Server, người dùng buộc phải cung cấp mã xác nhận. Từ đó, hệ thống so sánh SSH key ở Local của bạn và SSH key trên Server tương ứng với tài khoản đã đăng ký trước đó.</p>
+            <h3>Tính năng chính của GitHub</h3>>
+            <p> 
+                Tính năng chính của GitHub là gì? Như đã tìm hiểu, đây được xem như mạng xã hội dành cho các lập trình viên lớn nhất từ trước đến nay. Tại đây, người tham gia hưởng những chức năng cốt lõi như:
+                <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/a75c75c3-b9a8-4fc0-b925-b731294ed08a.image.png?v=1696498850368"/>
+            </p>
+           <ul>
+            <li>Có thể wiki, issue, thống kê, đổi tên project, project được đặt vào namespace là User.</li>
+            <li>GitHub cung cấp tính năng Watch Project cho người tham gia. Điều này nghĩa là theo dõi các hoạt động diễn ra trong dự án của người khác. Từ đó, bạn học hỏi được rất nhiều về cách phát triển phần mềm như thế nào.</li>
+            <li>Tính năng Follow User cấp quyền theo dõi các hoạt động của người khác.</li>
+           </ul>
+           <p>
+            Khi bạn tiến hành tạo một repo, toàn bộ source code của repo đó được lưu trên GitHub. Từ đó, bạn nhìn lại được quá trình mình đã làm việc như thế nào thông qua các Comment sau mỗi lần Commit.
+Điều thú vị nằm ở chỗ nhiều người có thể cùng tham gia làm một repo. Qua đây, bạn biết được ai đã Commit và cụ thể điều đó là gì. Tiếp theo, Source có thể được phát triển thành nhiều nhánh khác nhau.
+<br><br>
+Khi tìm hiểu GitHub là gì, bạn sẽ thấy được nguyên tắc làm việc với nhánh. Bạn có thể phát triển, nâng tầm dự án bằng nhiều nhánh rẽ. Thế nhưng, hoạt động cuối cùng là phải Merge lại vào nhánh Master để hoàn chỉnh Project.
+           </p>
+           <h4>Tại sao lập trình viên nên biết đến GitHub?</h4>
+          <p> Lý do thuyết phục lập trình viên hãy nghiên cứu nhiều hơn về GitHub là gì? Những lợi ích dưới đây sẽ là động lực để bạn gắn bó, khai thác nền tảng này mỗi ngày.</p>
+          <h4>Việc quản lý Source Code trở nên dễ dàng hơn với GitHub</h4>
+          <p>Khi bạn tiến hành tạo một repo, toàn bộ source code của repo đó được lưu trên GitHub. Từ đó, bạn nhìn lại được quá trình mình đã làm việc như thế nào thông qua các Comment sau mỗi lần Commit.
+<img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/82892cd4-5b6d-4556-9dd4-e42313f05fb6.image.png?v=1696501308329"/>
+Điều thú vị nằm ở chỗ nhiều người có thể cùng tham gia làm một repo. Qua đây, bạn biết được ai đã Commit và cụ thể điều đó là gì. Tiếp theo, Source có thể được phát triển thành nhiều nhánh khác nhau.
+<br><br>
+Khi tìm hiểu GitHub là gì, bạn sẽ thấy được nguyên tắc làm việc với nhánh. Bạn có thể phát triển, nâng tầm dự án bằng nhiều nhánh rẽ. Thế nhưng, hoạt động cuối cùng là phải Merge lại vào nhánh Master để hoàn chỉnh Project.
+          </p>
+<h4>Được quyền tracking sự thay đổi qua các phiên bản</h4>
+<p>Đây là một điều tạo ra hứng thú khi tìm hiểu GitHub là gì. Việc này là cần thiết khi trong một dự án có sự tham gia của nhiều thành viên khác nhau. GitHub sẽ cho biết ai đã thay đổi cái gì, lúc nào. Đồng thời, bạn cũng biết các files đó được lưu trữ ở đâu.
+<br><br>
+    Điều này thực hiện được là nhờ hệ thống luôn lưu các thay đổi đã push lên Repository. Cách thức này tương tự như ở Microsoft Word hay Google Drive. Bạn có thể hình dung mình luôn có một phiên bản lịch sử.
+    <br><br>
+    Điều này giúp đề phòng trường hợp các version trước bị mất hoặc lưu không thành công. Nhờ thế, những rủi ro đến với Project được hạn chế đáng kể.</p>
+<h4>Markdown</h4>
+<p>Markdown được biết đến là một cách định dạng text trên web. Nhờ đó, bạn có thể tùy chỉnh cách hiển thị của tài liệu:</p>
+<ul>
+    <li>Chuyển format từ định dạng in đậm sang in nghiêng,…</li>
+    <li>Thêm hình.</li>
+    <li>Tạo danh sách những thứ bạn có thể thao tác với Markdown.</li>
+</ul>
+<p>Hầu hết, mọi người biết đến Markdown là đoạn text đơn thuần với những ký tự đặc biệt được chèn vào. Ví dụ như # hoặc *. Trong quá trình tìm hiểu GitHub là gì, bạn sẽ thấy các yếu tố này xuất hiện ở những nơi như:</p>>
+<ul>
+    <li> Git.</li>
+    <li>Comments tại Issues.</li>
+    <li>Pull Requests</li>
+    <li>File có đuôi dạng .md hay .markdown extension…</li>
+</ul>
+<p>Từ đó cho thấy cách trình bày linh hoạt, đảm bảo yếu tố trực quan. Nhờ thế, bạn dễ dàng nắm bắt và nghiên cứu Source Code hơn.</p>
+<h4>GitHub là nơi giúp bạn chứng tỏ mình</h4>
+<p>
+    Biết đến GitHub là gì giúp bạn có cho mình một lợi thế quan trọng, đặc biệt là khi đi phỏng vấn. Không thể phủ nhận sự cần thiết của những lời hay ý đẹp được đưa vào CV. Thế nhưng, như thế là chưa đủ với một ngành mang tính chuyên môn cao như IT.
+    <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/8e1f3c0a-5576-4aa7-82d5-f7f7861cb0b7.image.png?v=1696520961053"/>
+    Năng lực của bạn sẽ được chứng minh rõ ràng nhất qua các Source Code. Đây chính là công cụ để thể hiện đẳng cấp, trình độ của một Developer thực thụ. Sự xuất hiện của GitHub trong CV giúp bạn nổi bật hơn giữa những ứng viên khác.
+<br><br>
+Từ góc nhìn của nhà tuyển dụng, GitHub cũng giống như một chiếc máy liar – detech. Đây là công cụ để phân biệt Real Developer và những người “giả mạo”, mô tả mình bằng từ ngữ sáo rỗng.
+<br><br>
+Sau khi biết GitHub là gì, bạn nên đầu tư ngay cho mình một tài khoản. Tiếp đó, hãy đưa đường dẫn vào CV, đảm bảo sẽ lọt vào mắt công ty công nghệ.
+<br><br>
+Thậm chí, nhiều doanh nghiệp còn xem đây là một phần trong quy trình tuyển dụng. Bạn sẽ có lợi thế nếu đóng góp nhiều cho cộng đồng hoặc đa dạng sản phẩm trên GitHub. Đó là cách để tạo Profile đáng tin cậy bậc nhất.
+<br><br>
+Quá trình phỏng vấn cũng vì thế được rút ngắn hơn rất nhiều. Bởi vì, doanh nghiệp đã nắm được thế mạnh, trình độ Coding như thế nào.
+</p>
+<h4>Cải thiện kỹ năng Code với GitHub</h4>
+<p>
+    Có vô vàn những phương thức khác nhau để bạn theo đuổi công nghệ thông tin. Nổi bật trong số đó chính là tìm hiểu GitHub là gì và bắt đầu tham gia vào nền tảng này. Nơi đây mở ra kho tàng:
+    <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/dbed0e8c-144d-4acc-96e7-65319202b7b7.image.png?v=1696521443913"/>
+    <ul>
+<li>Hàng vạn các Open Source Projects khác nhau.</li>
+<li>Hàng trăm ngàn Contributors từ đây.</li>
+<li>Hàng tỉ Commit hình thành mỗi ngày.</li>
+    </ul>
+    Cách học này gắn liền với thực tế nên sẽ rất hiệu quả, có tính ứng dụng cao. Học đến đâu bạn sẽ hình dung ra cách mình thực hiện đến đó.
+<br><br>
+“Bug Tracking” là tính năng được GitHub tích hợp nhằm đơn giản hóa quá trình “tìm và diệt bọ”. Để hiểu được quy trình, bạn cần mở Dashboard của từng dự án và lọc các thông tin. Tiếp đó, câu hỏi sẽ được hệ thống lại, sắp xếp theo từng mức độ phổ biến.
+</p>
+<h4>GitHub chính là kho tài nguyên tuyệt vời</h4>
+<p>
+    Qua tìm hiểu GitHub là gì, bạn sẽ thấy nền tảng cung cấp chức năng Explore. Từ đó, người tham gia có thể theo dõi, tìm kiếm những nguồn mở của dự án theo đúng Technology Pattern hướng đến.
+<br><br>
+GitHub hỗ trợ Code Search bất kể ở dưới dạng một dự án riêng biệt hay là website. Ngoài ra, nền tảng cũng được đánh giá SEO khá tốt. Vì thế, người dùng có thể tìm kiếm bất kỳ Code Strung nào được chia sẻ công khai.
+</p>
+<h4>GitHub Action</h4>
+<p>Khi quan sát GitHub là gì, bạn sẽ thấy trên Server có những Workflow Script được chạy tự động. Nhà phát triển dùng để phản hồi Events trên Repositories hoặc thực hiện Actions.
+<br><br>
+    Ví dụ, bạn viết một tiện ích nho nhỏ nào đó. Autotagger – GitHub Marketplace, sẽ tự động tạo git khi số phiên bản của package.json thay đổi. Nhìn qua tưởng rằng đây là hành động nhỏ nhưng có tác động rất lớn.
+    <br><br>
+    Điều này sẽ thấy khi bạn phải truy tìm Code ngược về bản phát hành. Đây là cách giảm áp lực cho các Project Maintainers.</p>
+    <h4>Lọi ích khác</h4>
+    <p>
+        Khi hiểu GitHub là gì và vận dụng, bạn không chỉ nhìn thấy những lợi ích về mặt chuyên môn. Đây còn là nơi để gặp gỡ, tương tác với các Developers trên toàn cầu. Họ sẽ chia sẻ cho bạn những kinh nghiệm và ý tưởng độc đáo.
+        <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/fb4b0948-2a76-41ca-b3e8-e6b9cdcea3d8.image.png?v=1696521817850"/>
+        Đồng thời, GitHub cũng cho phép người dùng chia sẻ Code, Text Fragments hoặc bất kỳ thông tin nào với Dev khác. Vì thế, hãy tận dụng để trao đổi Text, Gists Work như Git Repositories. Từ đó, bạn tách ra và cập nhật cho các phiên bản đó.
+    </p>
+    <h4>Thuật ngữ cần nắm vững khi dùng GitHub</h4>
+    <p>Trong quá trình nghiên cứu GitHub là gì, bạn sẽ bắt gặp nhiều thuật ngữ khác nhau. Chủ động tìm hiểu trước, giúp bạn làm quen với nền tảng nhanh chóng, dễ dàng hơn.</p>
+        </div>
+
+        <aside class="sidebar">
+          <h3>
+            Bài viết liên quan
+          </h3>
+          
+        </aside>
+      </div>
+
+      <footer>
+        <p>&copy; Copyright © 2023 Nguyễn Huỳnh Nhật Bảo - https://github.com/NguyenHuynhNhatBaocntt. All Rights Reserved.
+Design by Nhat Bao - Windows Phone - Windows 8 - App Store - HTML5 + CSS3</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Đứng trước lựa chọn tạo ra nhiều loại iPhone hoặc cắt bỏ khe cắm sạc, ông lớn Apple quyết định chuyển toàn bộ sản phẩm của mình sang USB-C để tuân thủ quy định của EU...</title>
+    <link rel="stylesheet" href="screen.css" />
+    <link rel="stylesheet" href="hinhanh.css" />
+    <link rel="stylesheet" href="trinhchieu.css" />
+    <link rel="stylesheet" href="hinhanh1.css" />
+    <base href="index.html" />
+    <style>
+      #snowflakeContainer{position:absolute;left:0px;top:0px;}
+      .snowflake{padding-left:15px;font-size:14px;line-height:24px;position:fixed;color:#ebebeb;user-select:none;z-index:1000;-moz-user-select:none;-ms-user-select:none;-khtml-user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;}
+      .snowflake:hover {cursor:default}
+    </style>
+    <div id='snowflakeContainer'>
+    <p class='snowflake'>❄</p>
+    </div>
+    <script style='text/javascript'>
+      //<![CDATA[
+      var requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var transforms=["transform","msTransform","webkitTransform","mozTransform","oTransform"];var transformProperty=getSupportedPropertyName(transforms);var snowflakes=[];var browserWidth;var browserHeight;var numberOfSnowflakes=50;var resetPosition=false;function setup(){window.addEventListener("DOMContentLoaded",generateSnowflakes,false);window.addEventListener("resize",setResetFlag,false)}setup();function getSupportedPropertyName(b){for(var a=0;a<b.length;a++){if(typeof document.body.style[b[a]]!="undefined"){return b[a]}}return null}function Snowflake(b,a,d,e,c){this.element=b;this.radius=a;this.speed=d;this.xPos=e;this.yPos=c;this.counter=0;this.sign=Math.random()<0.5?1:-1;this.element.style.opacity=0.5+Math.random();this.element.style.fontSize=4+Math.random()*30+"px"}Snowflake.prototype.update=function(){this.counter+=this.speed/5000;this.xPos+=this.sign*this.speed*Math.cos(this.counter)/40;this.yPos+=Math.sin(this.counter)/40+this.speed/30;setTranslate3DTransform(this.element,Math.round(this.xPos),Math.round(this.yPos));if(this.yPos>browserHeight){this.yPos=-50}};function setTranslate3DTransform(a,c,b){var d="translate3d("+c+"px, "+b+"px, 0)";a.style[transformProperty]=d}function generateSnowflakes(){var b=document.querySelector(".snowflake");var h=b.parentNode;browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var d=0;d<numberOfSnowflakes;d++){var j=b.cloneNode(true);h.appendChild(j);var e=getPosition(50,browserWidth);var a=getPosition(50,browserHeight);var c=5+Math.random()*40;var g=4+Math.random()*10;var f=new Snowflake(j,g,c,e,a);snowflakes.push(f)}h.removeChild(b);moveSnowflakes()}function moveSnowflakes(){for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.update()}if(resetPosition){browserWidth=document.documentElement.clientWidth;browserHeight=document.documentElement.clientHeight;for(var b=0;b<snowflakes.length;b++){var a=snowflakes[b];a.xPos=getPosition(50,browserWidth);a.yPos=getPosition(50,browserHeight)}resetPosition=false}requestAnimationFrame(moveSnowflakes)}function getPosition(b,a){return Math.round(-1*b+Math.random()*(a+2*b))}function setResetFlag(a){resetPosition=true};
+      //]]>
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="search">
+        <form>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input
+            type="text"
+            class="search-border"
+            placeholder="Tìm kiếm ..."
+            value=""
+            name="s"
+          /><a href="/en/" />
+          <button class="button">
+            <i class="fa fa-search" style="color: white"
+              ><img
+                src="https://cdn.glitch.global/19106c35-983b-4984-ac31-c383ff6ea19a/6bc7ec86-df44-48f9-83b6-13637163b322.image.png?v=1695364727805"
+                alt=""
+                width="10"
+                height="50"
+                srcset="" /><a></a
+            ></i>
+          </button>
+          <a href="/en/"
+            ><img
+              src="https://imgur.com/HQZJODF.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+          <a href="/"
+            ><img
+              src="https://imgur.com/ddgBAVL.png"
+              alt=""
+              width="20"
+              height="100"
+              srcset=""
+          /></a>
+        </form>
+      </div>
+    </header>
+    <div class="container">
+      <header>
+        <h2>Nguyen Huynh Nhat Bao's Hello World Page.</h2>
+        <a href="index.html" class="logo"
+          ><img
+            src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/cd8fd9c8-ab50-484a-9b5d-5669dc588f3e.image.png?v=1695866222769"
+            alt=""
+            width="200"
+            height="1000000"
+            srcset=""
+        /></a>
+      </header>
+      <nav class="site-nav">
+        <ul class="group">
+          <li><a href="./index.html">Trang chủ</a></li>
+          <li><a href="job.html">Công Việc</a></li>
+          <li><a href="news.html">Tin tức công nghệ</a></li>
+          <li><a href="ContactUs.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+        <div class="content-area group">
+          <div class="main-area">
+            <h1>
+                Đứng trước lựa chọn tạo ra nhiều loại iPhone hoặc cắt bỏ khe cắm sạc, ông lớn Apple quyết định chuyển toàn bộ sản phẩm của mình sang USB-C để tuân thủ quy định của EU...
+            </h1>
+            <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/e89d5a84-09f3-4245-a838-dfc9773b284e.image.png?v=1696327137373" height="300" width="1000"/>
+            <p>Trước ngày series iPhone 15 chính thức ra mắt tại sự kiện Wonderlust lúc 10h ngày 12/9 (0h ngày 13/9, giờ Hà Nội) tại nhà hát Steve Jobs trong khuôn viên trụ sở Apple Park ở California, số đông người dùng sớm biết đến một thay đổi đáng kể trên dòng điện thoại mới nhất. Đó là cổng sạc USB Type-C, thay thế cho bộ kết nối Lightning truyền thống vốn có mặt trên mọi chiếc iPhone của “nhà Táo khuyết” kể từ năm 2012.
+<br><br>
+                Thực tế, sự thay đổi này không phải chủ đích của gã đại gia công nghệ đến từ Mỹ. Lý do đằng sau đến từ việc vào năm ngoái, Liên Minh Châu Âu (EU) đã chính thức phê chuẩn việc sử dụng một chuẩn chung duy nhất (USB Type-C) cho các thiết bị di động tại châu Âu, hiệu lực từ năm 2024.
+                <br><br>
+                Theo phân tích của The Verge, mục tiêu của EU là giảm thải rác thải điện tử thải ra môi trường và đơn giản hóa trải nghiệm của người dùng. Quan điểm của các nhà chức trách ở khu vực này là nếu có nhiều thiết bị hơn có thể tương tác với cùng một loại cáp, thì sẽ có ít thiết bị điện tử và bộ sạc bị vứt đi hơn.
+                <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/1ad684b1-a65d-4277-b7c0-802981e65194.image.png?v=1696327160442" height="200" width="1000"/>
+                Theo ước tính, mỗi năm có 11.000 tấn bộ sạc ở châu Âu bị vứt bỏ và không sử dụng được đưa vào bãi rác. Các quan chức EU cũng hy vọng với quy định mới, người tiêu dùng sẽ tiết kiệm được chi phí chi trả cho các thiết bị sạc (ước tính lên tới 250 triệu Euro/năm) bằng cách tái sử dụng bộ sạc sẵn có. Mặt khác, động thái này cũng giảm đi tính cạnh tranh của các phụ kiện độc quyền.
+            </p>
+            <h3>APPLE KHÔNG CÒN LỰA CHỌN NÀO KHÁC</h3>
+            <p>Với tư cách là nhà sản xuất điện thoại thông minh lớn duy nhất chưa chuyển sang USB-C, Apple là công ty được cho là chịu tác động lớn nhất từ quyết định này, còn nhiều hãng điện thoại nổi tiếng khác như Samsung, Oppo đã dùng loại này từ lâu.
+<br><br>
+                Mặt khác, luật sản phẩm của EU chỉ áp dụng cho hàng hóa được bán tại các quốc gia thành viên nên không thể buộc Apple chuyển sang USB-C cho iPhone được bán ở nơi khác trên thế giới. Điều đó có nghĩa là Apple có thể giới hạn iPhone USB-C của mình ở các thị trường EU hoặc thậm chí rời khỏi khu vực này hoàn toàn nếu họ muốn iPhone vẫn độc quyền với Lightning.
+            <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/7deb0af1-9af8-401a-9d2d-dd91b68d1242.image.png?v=1696327185113"/>
+            Trước ngày series iPhone 15 chính thức ra mắt tại sự kiện Wonderlust lúc 10h ngày 12/9 (0h ngày 13/9, giờ Hà Nội) tại nhà hát Steve Jobs trong khuôn viên trụ sở Apple Park ở California, số đông người dùng sớm biết đến một thay đổi đáng kể trên dòng điện thoại mới nhất. Đó là cổng sạc USB Type-C, thay thế cho bộ kết nối Lightning truyền thống vốn có mặt trên mọi chiếc iPhone của “nhà Táo khuyết” kể từ năm 2012.
+<br><br>
+            Thực tế, sự thay đổi này không phải chủ đích của gã đại gia công nghệ đến từ Mỹ. Lý do đằng sau đến từ việc vào năm ngoái, Liên Minh Châu Âu (EU) đã chính thức phê chuẩn việc sử dụng một chuẩn chung duy nhất (USB Type-C) cho các thiết bị di động tại châu Âu, hiệu lực từ năm 2024.
+            <br><br>
+            Theo phân tích của The Verge, mục tiêu của EU là giảm thải rác thải điện tử thải ra môi trường và đơn giản hóa trải nghiệm của người dùng. Quan điểm của các nhà chức trách ở khu vực này là nếu có nhiều thiết bị hơn có thể tương tác với cùng một loại cáp, thì sẽ có ít thiết bị điện tử và bộ sạc bị vứt đi hơn.
+        <img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/b2ca9c04-8234-49c0-9db8-7bf1a7ace038.image.png?v=1696327210810"/>
+
+        Chấp nhận quy định mới nhưng đại diện Apple cũng nói công ty không hài lòng khi bị ép về mặt pháp lý trong chuyển đổi thông số kỹ thuật. Joswiak cho biết Apple luôn đi theo con đường riêng và tin tưởng vào các kỹ sư của mình, hơn là bị các nhà lập pháp buộc phải áp dụng các tiêu chuẩn phần cứng.
+<br><br>
+Ban đầu, các nhà phân tích dự đoán “Táo khuyết” chưa vội vàng sản xuất iPhone dùng cổng type-C ngay trong năm 2023, bởi quy định của EU đến mùa thu năm 2024 mới đưa vào áp dụng toàn bộ.
+<br><br>
+Điều đó đồng nghĩa đến dòng iPhone 16 hoặc 17, theo tiến trình giới thiệu sản phẩm mới hàng năm của Apple, người tiêu dùng châu Âu mới có thể sử dụng một dây sạc cho tất cả điện thoại, máy tính bảng. Tuy nhiên, nhiều nguồn tin từ nhà máy, hãng sản xuất dây sạc đều khẳng định sự thay đổi sớm có mặt ngay trên iPhone 15 ra mắt vào năm nay.
+<br><br>
+Ngoài ra, những chiếc sạc type-C mới dùng trên iPhone muốn đạt tốc độ tốt nhất phải áp dụng tiêu chuẩn MFi (viết tắt của Made for iPhone/iPad/iPod) của nhà Apple - một tiêu chuẩn gắn liền với cổng Lightning trước đây.
+<br><br>
+Theo MacRumors - trang tin chuyên rò rỉ tin đồn về iPhone, Apple sẽ bán riêng cáp USB-C hỗ trợ sạc và truyền dữ liệu siêu nhanh cho iPhone 15 Pro. Mẫu cáp được bọc dệt kim, có độ dày và dài 0,8 m, hơn 50% so với cáp Lightning cũ và có khả năng sạc nhanh 150 W.
+<br><br>
+Nghi vấn iPhone đổi cổng sạc nhưng tốc độ sạc không nhanh hơn cũng xuất hiện. USB-C có một số ưu điểm so với cổng Lightning về tốc độ truyền dữ liệu, song một số tin đồn cho thấy các phiên bản tiêu chuẩn của iPhone 15 và iPhone 15 Plus sẽ không có sự khác biệt, mà chỉ có dòng Pro mới được hưởng lợi.
+<br><br>
+Từ góc độ người dùng, nhiều người dùng bày tỏ sự ủng hộ với thay đổi này của Apple, bởi họ có thể dùng chung một dây sạc cho các thiết bị đến từ những hãng khác nhau, thay vì sắm riêng một dây cáp sạc Lightning cho iPhone của mình.
+<br><br>
+Còn những người chuẩn bị chi tiền mua series iPhone 15 sẽ phải chi thêm một khoản mua bộ sạc mới mà không tận dụng được phụ kiện cũ của mình.
+</p>
+        </div>
+
+        <aside class="sidebar">
+          <div class="lich">
+            <div id="days"></div>
+            <div id="dates"></div>
+            <div id="times"></div>
+      </div>
+      
+      <style>
+      .lich{
+      padding:20px;
+      background:#f1f1f1;
+      border-radius:10px;
+      font-size:30px;
+      border:2px solid #999;
+      }
+      </style>
+      
+      <script>
+      window.onload = setInterval(clock,1000);
+      function clock()
+      {
+      var d = new Date();
+      var date = d.getDate();
+      var month = d.getMonth();
+      var montharr =["Tháng 1","Tháng 2","tháng 3","Tháng 4","Tháng 5","Tháng 6","Tháng 7","Tháng 8","Tháng 9","Tháng 10","tháng 11","Tháng 12"];
+      month=montharr[month];
+      var year = d.getFullYear();
+      var day = d.getDay();
+      var dayarr =["Chủ Nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"];
+      day=dayarr[day];
+      var hour =d.getHours();
+      var min = d.getMinutes();
+      var sec = d.getSeconds();
+      document.getElementById("days").innerHTML=day;
+      document.getElementById("dates").innerHTML=date+" "+month+" "+year;
+      document.getElementById("times").innerHTML=hour+":"+min+":"+sec;
+      }
+      </script>
+            <h3>Tin tức liên quan</h3>
+          <p>
+            <a href="apple.html"
+              ><img src="https://cdn.glitch.global/bd9b4a6c-1a45-446b-9a71-c26efc0e1732/0634289a-ec77-4399-819f-231c7f86723f.image.png?v=1696323403865"/>
+            Apple ra mắt iPhone 15 series, giá cao nhất 46,99 triệu đồng cho bản Pro Max 1TB
+          </p>
+        </aside>
+      </div>
+
+      <footer>
+        <p>&copy; Copyright © 2023 Nguyễn Huỳnh Nhật Bảo - https://github.com/NguyenHuynhNhatBaocntt . All Rights Reserved.
+Design by Nhat Bao - Windows Phone - Windows 8 - App Store - HTML5 + CSS3</p>
+      </footer>
+    </div>
+  </body>
+</html>
